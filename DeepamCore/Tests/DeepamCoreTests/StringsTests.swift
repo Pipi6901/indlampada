@@ -53,10 +53,14 @@ struct StringsTests {
     func `образцы стихов взяты из корпуса`() throws {
         let corpus = try Corpus.load(.en)
         let l10n = L10n(.en)
-        for (verse, reference) in [(L10n.Key.demoVerse, L10n.Key.demoReference),
-                                   (.pauseVerse, .pauseReference)] {
-            let card = try #require(corpus.cards.first { $0.text == l10n[verse] }, "нет в корпусе: \(l10n[verse])")
-            #expect(card.reference == l10n[reference])
+        let pairs: [(verse: L10n.Key, reference: L10n.Key)] = [
+            (.demoVerse, .demoReference),
+            (.pauseVerse, .pauseReference),
+        ]
+        for pair in pairs {
+            let text = l10n[pair.verse]
+            let card = try #require(corpus.cards.first { $0.text == text }, "нет в корпусе: \(text)")
+            #expect(card.reference == l10n[pair.reference])
         }
     }
 

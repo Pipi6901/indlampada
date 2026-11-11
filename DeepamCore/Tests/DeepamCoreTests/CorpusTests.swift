@@ -68,8 +68,8 @@ struct CorpusTests {
         var seen = Set<String>()
         for card in try Corpus.load(.en).cards {
             let span = try #require(Self.span(card.id))
-            #expect((1...18).contains(span.chapter), card.id)
-            #expect(span.first >= 1 && span.first <= span.last, card.id)
+            #expect((1...18).contains(span.chapter), "\(card.id)")
+            #expect(span.first >= 1 && span.first <= span.last, "\(card.id)")
             #expect(span.last <= Self.versesInChapter[span.chapter - 1], "\(card.id): в главе нет такого стиха")
             #expect(span.last - span.first < 3, "\(card.id): в карточке больше трёх стихов")
             for verse in span.first...span.last {
@@ -102,7 +102,7 @@ struct CorpusTests {
                     || scalar.value == 0x200C || scalar.value == 0x200D
                 #expect(allowed, "\(card.id): U+\(String(scalar.value, radix: 16, uppercase: true))")
             }
-            #expect(!original.hasPrefix(" ") && !original.hasSuffix(" ") && !original.hasSuffix("\n"), card.id)
+            #expect(!original.hasPrefix(" ") && !original.hasSuffix(" ") && !original.hasSuffix("\n"), "\(card.id)")
             #expect(!original.contains("  "), "\(card.id): двойной пробел")
             #expect(!original.contains("\n\n"), "\(card.id): пустая строка")
         }
@@ -117,7 +117,7 @@ struct CorpusTests {
             let verses = span.last - span.first + 1
             let original = try #require(card.original)
             #expect(original.filter { $0 == "॥" }.count == verses, "\(card.id): знаков конца стиха не \(verses)")
-            #expect(original.hasSuffix("॥"), card.id)
+            #expect(original.hasSuffix("॥"), "\(card.id)")
             #expect(original.split(separator: "\n").count >= 2 * verses, "\(card.id): мало строк")
         }
     }
