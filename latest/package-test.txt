@@ -1,0 +1,172 @@
+== test: ошибки и итог ==
+237:/Users/runner/work/indlampada/indlampada/DeepamCore/Tests/DeepamCoreTests/CorpusTests.swift:71:59: error: cannot convert value of type 'String' to expected argument type 'Comment?'
+241:    |                                                           `- error: cannot convert value of type 'String' to expected argument type 'Comment?'
+245:/Users/runner/work/indlampada/indlampada/DeepamCore/Tests/DeepamCoreTests/CorpusTests.swift:72:70: error: cannot convert value of type 'String' to expected argument type 'Comment?'
+249:    |                                                                      `- error: cannot convert value of type 'String' to expected argument type 'Comment?'
+253:/Users/runner/work/indlampada/indlampada/DeepamCore/Tests/DeepamCoreTests/CorpusTests.swift:105:109: error: cannot convert value of type 'String' to expected argument type 'Comment?'
+257:    |                                                                                                             `- error: cannot convert value of type 'String' to expected argument type 'Comment?'
+261:/Users/runner/work/indlampada/indlampada/DeepamCore/Tests/DeepamCoreTests/CorpusTests.swift:120:53: error: cannot convert value of type 'String' to expected argument type 'Comment?'
+265:    |                                                   `- error: cannot convert value of type 'String' to expected argument type 'Comment?'
+269:/Users/runner/work/indlampada/indlampada/DeepamCore/Tests/DeepamCoreTests/CorpusTests.swift:71:59: error: cannot convert value of type 'String' to expected argument type 'Comment?'
+273:    |                                                           `- error: cannot convert value of type 'String' to expected argument type 'Comment?'
+277:/Users/runner/work/indlampada/indlampada/DeepamCore/Tests/DeepamCoreTests/CorpusTests.swift:72:70: error: cannot convert value of type 'String' to expected argument type 'Comment?'
+281:    |                                                                      `- error: cannot convert value of type 'String' to expected argument type 'Comment?'
+285:/Users/runner/work/indlampada/indlampada/DeepamCore/Tests/DeepamCoreTests/CorpusTests.swift:105:109: error: cannot convert value of type 'String' to expected argument type 'Comment?'
+289:    |                                                                                                             `- error: cannot convert value of type 'String' to expected argument type 'Comment?'
+293:/Users/runner/work/indlampada/indlampada/DeepamCore/Tests/DeepamCoreTests/CorpusTests.swift:120:53: error: cannot convert value of type 'String' to expected argument type 'Comment?'
+297:    |                                                   `- error: cannot convert value of type 'String' to expected argument type 'Comment?'
+301:/Users/runner/work/indlampada/indlampada/DeepamCore/Tests/DeepamCoreTests/CorpusTests.swift:71:59: error: cannot convert value of type 'String' to expected argument type 'Comment?'
+305:    |                                                           `- error: cannot convert value of type 'String' to expected argument type 'Comment?'
+309:/Users/runner/work/indlampada/indlampada/DeepamCore/Tests/DeepamCoreTests/CorpusTests.swift:72:70: error: cannot convert value of type 'String' to expected argument type 'Comment?'
+313:    |                                                                      `- error: cannot convert value of type 'String' to expected argument type 'Comment?'
+317:/Users/runner/work/indlampada/indlampada/DeepamCore/Tests/DeepamCoreTests/CorpusTests.swift:105:109: error: cannot convert value of type 'String' to expected argument type 'Comment?'
+321:    |                                                                                                             `- error: cannot convert value of type 'String' to expected argument type 'Comment?'
+325:/Users/runner/work/indlampada/indlampada/DeepamCore/Tests/DeepamCoreTests/CorpusTests.swift:120:53: error: cannot convert value of type 'String' to expected argument type 'Comment?'
+329:    |                                                   `- error: cannot convert value of type 'String' to expected argument type 'Comment?'
+333:/Users/runner/work/indlampada/indlampada/DeepamCore/Tests/DeepamCoreTests/CorpusTests.swift:71:59: error: cannot convert value of type 'String' to expected argument type 'Comment?'
+337:    |                                                           `- error: cannot convert value of type 'String' to expected argument type 'Comment?'
+341:/Users/runner/work/indlampada/indlampada/DeepamCore/Tests/DeepamCoreTests/CorpusTests.swift:72:70: error: cannot convert value of type 'String' to expected argument type 'Comment?'
+345:    |                                                                      `- error: cannot convert value of type 'String' to expected argument type 'Comment?'
+349:/Users/runner/work/indlampada/indlampada/DeepamCore/Tests/DeepamCoreTests/CorpusTests.swift:105:109: error: cannot convert value of type 'String' to expected argument type 'Comment?'
+353:    |                                                                                                             `- error: cannot convert value of type 'String' to expected argument type 'Comment?'
+357:/Users/runner/work/indlampada/indlampada/DeepamCore/Tests/DeepamCoreTests/CorpusTests.swift:120:53: error: cannot convert value of type 'String' to expected argument type 'Comment?'
+361:    |                                                   `- error: cannot convert value of type 'String' to expected argument type 'Comment?'
+365:/Users/runner/work/indlampada/indlampada/DeepamCore/Tests/DeepamCoreTests/CorpusTests.swift:71:59: error: cannot convert value of type 'String' to expected argument type 'Comment?'
+369:    |                                                           `- error: cannot convert value of type 'String' to expected argument type 'Comment?'
+373:/Users/runner/work/indlampada/indlampada/DeepamCore/Tests/DeepamCoreTests/CorpusTests.swift:72:70: error: cannot convert value of type 'String' to expected argument type 'Comment?'
+377:    |                                                                      `- error: cannot convert value of type 'String' to expected argument type 'Comment?'
+381:/Users/runner/work/indlampada/indlampada/DeepamCore/Tests/DeepamCoreTests/CorpusTests.swift:105:109: error: cannot convert value of type 'String' to expected argument type 'Comment?'
+385:    |                                                                                                             `- error: cannot convert value of type 'String' to expected argument type 'Comment?'
+389:/Users/runner/work/indlampada/indlampada/DeepamCore/Tests/DeepamCoreTests/CorpusTests.swift:120:53: error: cannot convert value of type 'String' to expected argument type 'Comment?'
+393:    |                                                   `- error: cannot convert value of type 'String' to expected argument type 'Comment?'
+397:/Users/runner/work/indlampada/indlampada/DeepamCore/Tests/DeepamCoreTests/CorpusTests.swift:71:59: error: cannot convert value of type 'String' to expected argument type 'Comment?'
+401:    |                                                           `- error: cannot convert value of type 'String' to expected argument type 'Comment?'
+405:/Users/runner/work/indlampada/indlampada/DeepamCore/Tests/DeepamCoreTests/CorpusTests.swift:72:70: error: cannot convert value of type 'String' to expected argument type 'Comment?'
+409:    |                                                                      `- error: cannot convert value of type 'String' to expected argument type 'Comment?'
+413:/Users/runner/work/indlampada/indlampada/DeepamCore/Tests/DeepamCoreTests/CorpusTests.swift:105:109: error: cannot convert value of type 'String' to expected argument type 'Comment?'
+417:    |                                                                                                             `- error: cannot convert value of type 'String' to expected argument type 'Comment?'
+421:/Users/runner/work/indlampada/indlampada/DeepamCore/Tests/DeepamCoreTests/CorpusTests.swift:120:53: error: cannot convert value of type 'String' to expected argument type 'Comment?'
+425:    |                                                   `- error: cannot convert value of type 'String' to expected argument type 'Comment?'
+533:error: fatalError
+
+== test: хвост ==
+103 |                 #expect(allowed, "\(card.id): U+\(String(scalar.value, radix: 16, uppercase: true))")
+104 |             }
+105 |             #expect(!original.hasPrefix(" ") && !original.hasSuffix(" ") && !original.hasSuffix("\n"), card.id)
+    |                                                                                                             `- error: cannot convert value of type 'String' to expected argument type 'Comment?'
+106 |             #expect(!original.contains("  "), "\(card.id): двойной пробел")
+107 |             #expect(!original.contains("\n\n"), "\(card.id): пустая строка")
+
+/Users/runner/work/indlampada/indlampada/DeepamCore/Tests/DeepamCoreTests/CorpusTests.swift:120:53: error: cannot convert value of type 'String' to expected argument type 'Comment?'
+118 |             let original = try #require(card.original)
+119 |             #expect(original.filter { $0 == "॥" }.count == verses, "\(card.id): знаков конца стиха не \(verses)")
+120 |             #expect(original.hasSuffix("॥"), card.id)
+    |                                                   `- error: cannot convert value of type 'String' to expected argument type 'Comment?'
+121 |             #expect(original.split(separator: "\n").count >= 2 * verses, "\(card.id): мало строк")
+122 |         }
+[310/435] Compiling RevenueCat Clock.swift
+[311/435] Compiling RevenueCat DateExtensions.swift
+[312/435] Compiling RevenueCat DateProvider.swift
+[313/435] Compiling RevenueCat ISODurationFormatter.swift
+[314/435] Compiling RevenueCat ISOPeriodFormatter.swift
+[315/435] Compiling RevenueCat TimingUtil.swift
+[316/435] Compiling RevenueCat Deprecations.swift
+[317/435] Compiling RevenueCat Either.swift
+[318/435] Compiling RevenueCat JWT.swift
+[319/435] Compiling RevenueCat PreferredLocalesProvider.swift
+[320/435] Compiling RevenueCat MacDevice.swift
+[321/435] Compiling RevenueCat MapAppStoreDetector.swift
+[322/435] Compiling RevenueCat Obsoletions.swift
+[323/435] Compiling RevenueCat PlatformInfo.swift
+[324/435] Compiling RevenueCat PriceFormatterProvider.swift
+[325/435] Compiling RevenueCat RateLimiter.swift
+[326/435] Compiling RevenueCat SandboxEnvironmentDetector.swift
+[327/435] Compiling RevenueCat StoreKitVersion.swift
+[328/435] Compiling RevenueCat SystemInfo.swift
+[329/435] Compiling RevenueCat APISourceFailover.swift
+[330/435] Compiling RevenueCat Audience.swift
+[331/435] Compiling RevenueCat AudiencesConfigProvider.swift
+[332/435] Compiling RevenueCat Backend.swift
+[333/435] Compiling RevenueCat BackendConfiguration.swift
+[334/435] Compiling RevenueCat BackendLanes.swift
+[335/460] Compiling DeepamCoreTests ReviewPromptTests.swift
+/Users/runner/work/indlampada/indlampada/DeepamCore/Tests/DeepamCoreTests/WhatsNewTests.swift:8:41: warning: '#require(_:_:)' is redundant because 'UserDefaults(suiteName: "whatsnew.\(UUID().uuidString)")' never equals 'nil' (from macro 'require')
+ 6 | struct WhatsNewTests {
+ 7 |     private func makeSettings() throws -> AppSettings {
+ 8 |         AppSettings(store: try #require(UserDefaults(suiteName: "whatsnew.\(UUID().uuidString)")))
+   |                                         `- warning: '#require(_:_:)' is redundant because 'UserDefaults(suiteName: "whatsnew.\(UUID().uuidString)")' never equals 'nil' (from macro 'require')
+ 9 |     }
+10 | 
+[336/460] Compiling DeepamCoreTests ShortTextTests.swift
+/Users/runner/work/indlampada/indlampada/DeepamCore/Tests/DeepamCoreTests/WhatsNewTests.swift:8:41: warning: '#require(_:_:)' is redundant because 'UserDefaults(suiteName: "whatsnew.\(UUID().uuidString)")' never equals 'nil' (from macro 'require')
+ 6 | struct WhatsNewTests {
+ 7 |     private func makeSettings() throws -> AppSettings {
+ 8 |         AppSettings(store: try #require(UserDefaults(suiteName: "whatsnew.\(UUID().uuidString)")))
+   |                                         `- warning: '#require(_:_:)' is redundant because 'UserDefaults(suiteName: "whatsnew.\(UUID().uuidString)")' never equals 'nil' (from macro 'require')
+ 9 |     }
+10 | 
+[337/460] Compiling DeepamCoreTests StringsTests.swift
+/Users/runner/work/indlampada/indlampada/DeepamCore/Tests/DeepamCoreTests/WhatsNewTests.swift:8:41: warning: '#require(_:_:)' is redundant because 'UserDefaults(suiteName: "whatsnew.\(UUID().uuidString)")' never equals 'nil' (from macro 'require')
+ 6 | struct WhatsNewTests {
+ 7 |     private func makeSettings() throws -> AppSettings {
+ 8 |         AppSettings(store: try #require(UserDefaults(suiteName: "whatsnew.\(UUID().uuidString)")))
+   |                                         `- warning: '#require(_:_:)' is redundant because 'UserDefaults(suiteName: "whatsnew.\(UUID().uuidString)")' never equals 'nil' (from macro 'require')
+ 9 |     }
+10 | 
+[338/460] Compiling DeepamCoreTests VerseEngineTests.swift
+/Users/runner/work/indlampada/indlampada/DeepamCore/Tests/DeepamCoreTests/WhatsNewTests.swift:8:41: warning: '#require(_:_:)' is redundant because 'UserDefaults(suiteName: "whatsnew.\(UUID().uuidString)")' never equals 'nil' (from macro 'require')
+ 6 | struct WhatsNewTests {
+ 7 |     private func makeSettings() throws -> AppSettings {
+ 8 |         AppSettings(store: try #require(UserDefaults(suiteName: "whatsnew.\(UUID().uuidString)")))
+   |                                         `- warning: '#require(_:_:)' is redundant because 'UserDefaults(suiteName: "whatsnew.\(UUID().uuidString)")' never equals 'nil' (from macro 'require')
+ 9 |     }
+10 | 
+[339/460] Compiling DeepamCoreTests WhatsNewTests.swift
+/Users/runner/work/indlampada/indlampada/DeepamCore/Tests/DeepamCoreTests/WhatsNewTests.swift:8:41: warning: '#require(_:_:)' is redundant because 'UserDefaults(suiteName: "whatsnew.\(UUID().uuidString)")' never equals 'nil' (from macro 'require')
+ 6 | struct WhatsNewTests {
+ 7 |     private func makeSettings() throws -> AppSettings {
+ 8 |         AppSettings(store: try #require(UserDefaults(suiteName: "whatsnew.\(UUID().uuidString)")))
+   |                                         `- warning: '#require(_:_:)' is redundant because 'UserDefaults(suiteName: "whatsnew.\(UUID().uuidString)")' never equals 'nil' (from macro 'require')
+ 9 |     }
+10 | 
+[340/460] Compiling DeepamUI AppTheme.swift
+/Users/runner/work/indlampada/indlampada/DeepamCore/Tests/DeepamCoreTests/RemindersTests.swift:157:41: warning: '#require(_:_:)' is redundant because 'UserDefaults(suiteName: "sync.tests." + UUID().uuidString)' never equals 'nil' (from macro 'require')
+155 | 
+156 |     private func makeSettings() throws -> AppSettings {
+157 |         AppSettings(store: try #require(UserDefaults(suiteName: "sync.tests." + UUID().uuidString)))
+    |                                         `- warning: '#require(_:_:)' is redundant because 'UserDefaults(suiteName: "sync.tests." + UUID().uuidString)' never equals 'nil' (from macro 'require')
+158 |     }
+159 | 
+[341/460] Compiling DeepamUI Background.swift
+/Users/runner/work/indlampada/indlampada/DeepamCore/Tests/DeepamCoreTests/RemindersTests.swift:157:41: warning: '#require(_:_:)' is redundant because 'UserDefaults(suiteName: "sync.tests." + UUID().uuidString)' never equals 'nil' (from macro 'require')
+155 | 
+156 |     private func makeSettings() throws -> AppSettings {
+157 |         AppSettings(store: try #require(UserDefaults(suiteName: "sync.tests." + UUID().uuidString)))
+    |                                         `- warning: '#require(_:_:)' is redundant because 'UserDefaults(suiteName: "sync.tests." + UUID().uuidString)' never equals 'nil' (from macro 'require')
+158 |     }
+159 | 
+[342/460] Compiling DeepamUI CoachOverlay.swift
+/Users/runner/work/indlampada/indlampada/DeepamCore/Tests/DeepamCoreTests/RemindersTests.swift:157:41: warning: '#require(_:_:)' is redundant because 'UserDefaults(suiteName: "sync.tests." + UUID().uuidString)' never equals 'nil' (from macro 'require')
+155 | 
+156 |     private func makeSettings() throws -> AppSettings {
+157 |         AppSettings(store: try #require(UserDefaults(suiteName: "sync.tests." + UUID().uuidString)))
+    |                                         `- warning: '#require(_:_:)' is redundant because 'UserDefaults(suiteName: "sync.tests." + UUID().uuidString)' never equals 'nil' (from macro 'require')
+158 |     }
+159 | 
+[343/460] Compiling DeepamUI Color+Hex.swift
+/Users/runner/work/indlampada/indlampada/DeepamCore/Tests/DeepamCoreTests/RemindersTests.swift:157:41: warning: '#require(_:_:)' is redundant because 'UserDefaults(suiteName: "sync.tests." + UUID().uuidString)' never equals 'nil' (from macro 'require')
+155 | 
+156 |     private func makeSettings() throws -> AppSettings {
+157 |         AppSettings(store: try #require(UserDefaults(suiteName: "sync.tests." + UUID().uuidString)))
+    |                                         `- warning: '#require(_:_:)' is redundant because 'UserDefaults(suiteName: "sync.tests." + UUID().uuidString)' never equals 'nil' (from macro 'require')
+158 |     }
+159 | 
+[344/460] Compiling DeepamUI Components.swift
+/Users/runner/work/indlampada/indlampada/DeepamCore/Tests/DeepamCoreTests/RemindersTests.swift:157:41: warning: '#require(_:_:)' is redundant because 'UserDefaults(suiteName: "sync.tests." + UUID().uuidString)' never equals 'nil' (from macro 'require')
+155 | 
+156 |     private func makeSettings() throws -> AppSettings {
+157 |         AppSettings(store: try #require(UserDefaults(suiteName: "sync.tests." + UUID().uuidString)))
+    |                                         `- warning: '#require(_:_:)' is redundant because 'UserDefaults(suiteName: "sync.tests." + UUID().uuidString)' never equals 'nil' (from macro 'require')
+158 |     }
+159 | 
+error: fatalError
