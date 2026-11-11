@@ -1,0 +1,523 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4AC103E1E905C6E8685946CB /* DeepamUI in Frameworks */ = {isa = PBXBuildFile; productRef = E5388CB0B2B141D2A2038073 /* DeepamUI */; };
+		326C8C86A79ED40869B42294 /* DeepamWidgets in Frameworks */ = {isa = PBXBuildFile; productRef = C74943D6D11DB5BEEFB0200B /* DeepamWidgets */; };
+		FDEA5D530A94931421FF939B /* DeepamPurchases in Frameworks */ = {isa = PBXBuildFile; productRef = 7FCECD7141670945DCC383DE /* DeepamPurchases */; };
+		B08C32CAED69092ED62E718E /* FirebaseAnalyticsCore in Frameworks */ = {isa = PBXBuildFile; productRef = 12E20B0958D9DA2E809599D7 /* FirebaseAnalyticsCore */; };
+		30204AC6B767260769A402C1 /* FirebaseCore in Frameworks */ = {isa = PBXBuildFile; productRef = E71EDB7B856891AE455BCAE1 /* FirebaseCore */; };
+		C777135D2D9972810EFCFF36 /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = 25E355D086A4D48D0D9477EB /* FirebaseMessaging */; };
+		993F490B5EBCFFAFF0944D53 /* FacebookCore in Frameworks */ = {isa = PBXBuildFile; productRef = B66FF6ABF7FF10CBB96C3BD5 /* FacebookCore */; };
+		20BF218F05D5AA0F1B019B0F /* AmplitudeSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 8F9265231A32DD5C5DF0B67F /* AmplitudeSwift */; };
+		33AF8B3EDF6D2A1FB5887811 /* DeepamWidgets in Frameworks */ = {isa = PBXBuildFile; productRef = 7F86DFF52A39DE865459EEC6 /* DeepamWidgets */; };
+		B5F235D5B8CC63C82183E49E /* DeepamWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = F30BDCDD500CB208200CB09D /* DeepamWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		85673086EF6CFD3A1F8591AF /* Deepam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Deepam.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F30BDCDD500CB208200CB09D /* DeepamWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = DeepamWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		67D99A50C43AB7AF1197937A /* Deepam */ = {isa = PBXFileSystemSynchronizedRootGroup; path = Deepam; sourceTree = "<group>"; };
+		A96DF50A8B8A8ED24375D2BD /* DeepamWidgetExtension */ = {isa = PBXFileSystemSynchronizedRootGroup; path = DeepamWidgetExtension; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		69BE8A4D8E4D9DA4E7DB3928 = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4AC103E1E905C6E8685946CB /* DeepamUI in Frameworks */,
+				FDEA5D530A94931421FF939B /* DeepamPurchases in Frameworks */,
+				B08C32CAED69092ED62E718E /* FirebaseAnalyticsCore in Frameworks */,
+				30204AC6B767260769A402C1 /* FirebaseCore in Frameworks */,
+				C777135D2D9972810EFCFF36 /* FirebaseMessaging in Frameworks */,
+				993F490B5EBCFFAFF0944D53 /* FacebookCore in Frameworks */,
+				20BF218F05D5AA0F1B019B0F /* AmplitudeSwift in Frameworks */,
+				326C8C86A79ED40869B42294 /* DeepamWidgets in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B2380BBF1B79AD8C376041D7 = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				33AF8B3EDF6D2A1FB5887811 /* DeepamWidgets in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		CC531F55156D1B4CD472E876 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				B5F235D5B8CC63C82183E49E /* DeepamWidgetExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXGroup section */
+		E50290A24C49A459B43487C5 = {
+			isa = PBXGroup;
+			children = (
+				67D99A50C43AB7AF1197937A /* Deepam */,
+				A96DF50A8B8A8ED24375D2BD /* DeepamWidgetExtension */,
+				328EC33DF3954DC9B83FA285 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		328EC33DF3954DC9B83FA285 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				85673086EF6CFD3A1F8591AF /* Deepam.app */,
+				F30BDCDD500CB208200CB09D /* DeepamWidgetExtension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0E8A3AD980EC179856012B7E /* Deepam */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 81E0CC479FEB861BE0CB6FCE;
+			buildPhases = (
+				4E57AE888889001C06A4F7E8,
+				69BE8A4D8E4D9DA4E7DB3928,
+				D6C9E8A172005E68A1DD674F,
+				CC531F55156D1B4CD472E876 /* Embed Foundation Extensions */,
+			);
+			buildRules = ();
+			dependencies = (
+				4DFF1A188E1A278EEF050AC1 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				67D99A50C43AB7AF1197937A /* Deepam */,
+			);
+			name = Deepam;
+			packageProductDependencies = (
+				E5388CB0B2B141D2A2038073 /* DeepamUI */,
+				C74943D6D11DB5BEEFB0200B /* DeepamWidgets */,
+				7FCECD7141670945DCC383DE /* DeepamPurchases */,
+				12E20B0958D9DA2E809599D7 /* FirebaseAnalyticsCore */,
+				E71EDB7B856891AE455BCAE1 /* FirebaseCore */,
+				25E355D086A4D48D0D9477EB /* FirebaseMessaging */,
+				B66FF6ABF7FF10CBB96C3BD5 /* FacebookCore */,
+				8F9265231A32DD5C5DF0B67F /* AmplitudeSwift */,
+			);
+			productName = Deepam;
+			productReference = 85673086EF6CFD3A1F8591AF /* Deepam.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B338A6D4C6BDBB2A974D5791 /* DeepamWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3A092AD02A047B3E624083F6;
+			buildPhases = (
+				688F80C0261359458554A718,
+				B2380BBF1B79AD8C376041D7,
+				94BA1586547A123E0D970F5A,
+			);
+			buildRules = ();
+			dependencies = ();
+			fileSystemSynchronizedGroups = (
+				A96DF50A8B8A8ED24375D2BD /* DeepamWidgetExtension */,
+			);
+			name = DeepamWidgetExtension;
+			packageProductDependencies = (
+				7F86DFF52A39DE865459EEC6 /* DeepamWidgets */,
+			);
+			productName = DeepamWidgetExtension;
+			productReference = F30BDCDD500CB208200CB09D /* DeepamWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXTargetDependency section */
+		4DFF1A188E1A278EEF050AC1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B338A6D4C6BDBB2A974D5791 /* DeepamWidgetExtension */;
+			targetProxy = 9FDD0A745E4E107EFE10724E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXContainerItemProxy section */
+		9FDD0A745E4E107EFE10724E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 98F54143AB4E86B28C3AFEE0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B338A6D4C6BDBB2A974D5791;
+			remoteInfo = DeepamWidgetExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXProject section */
+		98F54143AB4E86B28C3AFEE0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 2630;
+				LastUpgradeCheck = 2630;
+				TargetAttributes = {
+					0E8A3AD980EC179856012B7E = {
+						CreatedOnToolsVersion = 26.3;
+					};
+					B338A6D4C6BDBB2A974D5791 = {
+						CreatedOnToolsVersion = 26.3;
+					};
+				};
+			};
+			buildConfigurationList = 011BA6E610F8D3ADDC48D997;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E50290A24C49A459B43487C5;
+			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				4B2C8A9ED36C04F6D64573E1 /* XCLocalSwiftPackageReference "../DeepamCore" */,
+				A9FB4D3238F52DD0985F4E92 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				D9E885D2875A8D851696265B /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */,
+				40B26E18363C1EF76EB80786 /* XCRemoteSwiftPackageReference "Amplitude-Swift" */,
+			);
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 328EC33DF3954DC9B83FA285 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0E8A3AD980EC179856012B7E /* Deepam */,
+				B338A6D4C6BDBB2A974D5791 /* DeepamWidgetExtension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D6C9E8A172005E68A1DD674F = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = ();
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		94BA1586547A123E0D970F5A = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = ();
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4E57AE888889001C06A4F7E8 = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = ();
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		688F80C0261359458554A718 = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = ();
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		671D9E2E95809E27B85B6A20 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		AC5D6E15C21DCFD954DE2D0E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5FD7CB20C3C0A7C4C28C16DB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				ASSETCATALOG_COMPILER_ALTERNATE_APPICON_NAMES = "night lotus om dawn temple mandala light";
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				ENABLE_DEBUG_DYLIB = NO;
+				CODE_SIGNING_ALLOWED = YES;
+				CODE_SIGNING_REQUIRED = YES;
+				CODE_SIGN_ENTITLEMENTS = Deepam.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphonesimulator*]" = "-";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = VG9U7V4AAL;
+				CURRENT_PROJECT_VERSION = 1;
+				VERSIONING_SYSTEM = "apple-generic";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchScreen_BackgroundColor = LaunchBackground;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_CFBundleDisplayName = Deepam;
+				INFOPLIST_FILE = DeepamInfo.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = "-ObjC";
+				LD_RUNPATH_SEARCH_PATHS = ("$(inherited)", "@executable_path/Frameworks", );
+				PRODUCT_BUNDLE_IDENTIFIER = com.astonio.deepam;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = "1";
+			};
+			name = Debug;
+		};
+		AF694ED35853F54DD12B6EE6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				ASSETCATALOG_COMPILER_ALTERNATE_APPICON_NAMES = "night lotus om dawn temple mandala light";
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				ENABLE_DEBUG_DYLIB = NO;
+				CODE_SIGNING_ALLOWED = YES;
+				CODE_SIGNING_REQUIRED = YES;
+				CODE_SIGN_ENTITLEMENTS = Deepam.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphonesimulator*]" = "-";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = VG9U7V4AAL;
+				CURRENT_PROJECT_VERSION = 1;
+				VERSIONING_SYSTEM = "apple-generic";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchScreen_BackgroundColor = LaunchBackground;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_CFBundleDisplayName = Deepam;
+				INFOPLIST_FILE = DeepamInfo.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = "-ObjC";
+				LD_RUNPATH_SEARCH_PATHS = ("$(inherited)", "@executable_path/Frameworks", );
+				PRODUCT_BUNDLE_IDENTIFIER = com.astonio.deepam;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = "1";
+			};
+			name = Release;
+		};
+		F9491B551A1C6F5E0B5D8284 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGNING_ALLOWED = YES;
+				CODE_SIGNING_REQUIRED = YES;
+				CODE_SIGN_ENTITLEMENTS = DeepamWidget.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphonesimulator*]" = "-";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = VG9U7V4AAL;
+				CURRENT_PROJECT_VERSION = 1;
+				VERSIONING_SYSTEM = "apple-generic";
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = WidgetInfo.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Deepam;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.astonio.deepam.widgets;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = "1";
+			};
+			name = Debug;
+		};
+		11459B4419896CAC250774CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGNING_ALLOWED = YES;
+				CODE_SIGNING_REQUIRED = YES;
+				CODE_SIGN_ENTITLEMENTS = DeepamWidget.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphonesimulator*]" = "-";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = VG9U7V4AAL;
+				CURRENT_PROJECT_VERSION = 1;
+				VERSIONING_SYSTEM = "apple-generic";
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = WidgetInfo.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Deepam;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.astonio.deepam.widgets;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = "1";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		011BA6E610F8D3ADDC48D997 = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				671D9E2E95809E27B85B6A20 /* Debug */,
+				AC5D6E15C21DCFD954DE2D0E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		81E0CC479FEB861BE0CB6FCE = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5FD7CB20C3C0A7C4C28C16DB /* Debug */,
+				AF694ED35853F54DD12B6EE6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3A092AD02A047B3E624083F6 = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F9491B551A1C6F5E0B5D8284 /* Debug */,
+				11459B4419896CAC250774CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		4B2C8A9ED36C04F6D64573E1 /* XCLocalSwiftPackageReference "../DeepamCore" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = ../DeepamCore;
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A9FB4D3238F52DD0985F4E92 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 13.0.1;
+			};
+		};
+		D9E885D2875A8D851696265B /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/facebook/facebook-ios-sdk";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 18.1.1;
+			};
+		};
+		40B26E18363C1EF76EB80786 /* XCRemoteSwiftPackageReference "Amplitude-Swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/amplitude/Amplitude-Swift";
+			requirement = {
+				kind = exactVersion;
+				version = 1.19.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		12E20B0958D9DA2E809599D7 /* FirebaseAnalyticsCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A9FB4D3238F52DD0985F4E92 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalyticsCore;
+		};
+		E71EDB7B856891AE455BCAE1 /* FirebaseCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A9FB4D3238F52DD0985F4E92 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCore;
+		};
+		25E355D086A4D48D0D9477EB /* FirebaseMessaging */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A9FB4D3238F52DD0985F4E92 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseMessaging;
+		};
+		B66FF6ABF7FF10CBB96C3BD5 /* FacebookCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D9E885D2875A8D851696265B /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */;
+			productName = FacebookCore;
+		};
+		8F9265231A32DD5C5DF0B67F /* AmplitudeSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 40B26E18363C1EF76EB80786 /* XCRemoteSwiftPackageReference "Amplitude-Swift" */;
+			productName = AmplitudeSwift;
+		};
+		7FCECD7141670945DCC383DE /* DeepamPurchases */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = DeepamPurchases;
+		};
+		E5388CB0B2B141D2A2038073 /* DeepamUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = DeepamUI;
+		};
+		C74943D6D11DB5BEEFB0200B /* DeepamWidgets */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = DeepamWidgets;
+		};
+		7F86DFF52A39DE865459EEC6 /* DeepamWidgets */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = DeepamWidgets;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 98F54143AB4E86B28C3AFEE0 /* Project object */;
+}

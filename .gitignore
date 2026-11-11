@@ -1,0 +1,32 @@
+# macOS
+.DS_Store
+
+# Xcode
+xcuserdata/
+*.xcuserstate
+DerivedData/
+build/
+*.ipa
+*.dSYM.zip
+
+# Swift Package Manager
+.build/
+.swiftpm/xcode/package.xcworkspace/xcuserdata/
+
+# Python
+__pycache__/
+*.pyc
+
+# Локальные заметки Claude Code
+.claude/duet/
+
+# Ключи и файлы подписи не должны попадать в репозиторий
+*.p8
+*.p12
+*.mobileprovision
+*_cert_key
+# GoogleService-Info.plist публичный по замыслу Firebase (ключ ограничивается
+# по bundle ID), поэтому в репозиторий его класть можно и нужно.
+
+# Предпросмотр графики
+tools/art/_preview.png

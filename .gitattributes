@@ -1,0 +1,5 @@
+# Макет Pencil и картинки — бинарные файлы: git не должен менять в них переводы строк.
+*.pen binary
+*.png binary
+*.jpg binary
+*.ttf binary

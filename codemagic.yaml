@@ -1,0 +1,299 @@
+# Codemagic → iOS → TestFlight (Deepam).
+#
+# Портировано с рабочего конфига medivue-main (та же команда VG9U7V4AAL, тот же
+# distribution-сертификат). Deepam проще: нативный Swift, без Expo, без npm и
+# без CocoaPods — зависимости тянет SPM, и Xcode делает это сам.
+#
+# Три особенности ЭТОГО репозитория:
+#  1. Deepam.xcodeproj собирается скриптом `make_project.py`, а не правится
+#     руками. В репозитории он есть, но CI пересобирает его первым шагом:
+#     источник истины — скрипт, и расхождение между ним и закоммиченным
+#     проектом иначе всплыло бы только на устройстве.
+#  2. Подписывать надо ДВА идентификатора — приложение и расширение виджета.
+#     Профиль только для приложения даёт сборку, которая падает на упаковке
+#     .ipa: расширению нужен свой.
+#  3. Обоим нужна группа `group.com.astonio.deepam` в App ID на портале. Без
+#     неё сборка пройдёт, а виджет молча покажет настройки по умолчанию — он не
+#     увидит того, что человек выбрал в приложении.
+
+workflows:
+  ios-testflight:
+    name: Deepam iOS → TestFlight
+    instance_type: mac_mini_m2
+    # С Firebase сборка заметно дольше: репозиторий SDK тянется целиком, а его
+    # ядро собирается из исходников. 60 минут впритык, потолок с запасом
+    # ничего не стоит — платится только реальное время.
+    max_build_duration: 90
+
+    integrations:
+      # Ключ App Store Connect работает на весь аккаунт, а не на приложение,
+      # поэтому переиспользуем командный вместо четвёртого по счёту. Имя должно
+      # совпадать с записью в Codemagic → Teams → Integrations посимвольно.
+      app_store_connect: Astonio
+
+    environment:
+      groups:
+        # Переменные группы:
+        #   CERTIFICATE_PRIVATE_KEY — приватный ключ distribution-сертификата
+        #     команды;
+        #   GA_MP_SECRET — секрет Measurement Protocol из GA4 для «пульса»
+        #     виджета (защищённая). xcodebuild видит переменные окружения как
+        #     настройки сборки и подставляет её в WidgetInfo.plist. Нет её —
+        #     сборка пройдёт, а пульс будет молчать.
+        # APP_STORE_CONNECT_* сюда класть НЕ НАДО: их подставляет интеграция
+        # `Astonio` (см. integrations), и дубликаты из группы с ней конфликтуют.
+        # Группы в Codemagic по-апповые — создать у ЭТОГО приложения.
+        - app_store_vars
+      # NB: блока `ios_signing` здесь намеренно НЕТ. Он отрабатывает до scripts
+      # и умеет только забрать готовый профиль — на первой сборке, когда профиля
+      # ещё не существует, падает с «No matching profiles found» раньше, чем наш
+      # шаг подписи успел бы его создать.
+      vars:
+        BUNDLE_ID: "com.astonio.deepam"
+        WIDGET_BUNDLE_ID: "com.astonio.deepam.widgets"
+        # Числовой Apple ID приложения из App Store Connect (App Information → General → Apple ID).
+        # Пока приложения в ASC нет — заглушка; сборка с ней нарочно не стартует (см. шаг подписи).
+        APP_STORE_APPLE_ID: "CHANGE_ME_APP_STORE_APPLE_ID"
+        XCODE_SCHEME: "Deepam"
+      # Первая сборка идёт на `latest` — последний стабильный Xcode, который знает
+      # Codemagic: с прибитым номером, которого у них нет, сборка не стартует
+      # вовсе, и первый запуск терялся бы на этом. Когда сборка пройдёт, номер
+      # можно прибить (например `27.1`): только с SDK iOS 27.1 приложение на
+      # iPhone Duo идёт край в край на обоих экранах, на SDK 26 оно там
+      # открывается окном обычного iPhone посреди пустоты. Прибивают номер,
+      # а не оставляют `latest`, чтобы сборку не сломал Xcode, о выходе
+      # которого мы не знали.
+      xcode: latest
+
+    # Автозапуска по каждому пушу нет: у приложения много мелких коммитов, а сборка
+    # занимает 20–40 минут платного времени. Запуск — кнопкой «Start new build» в
+    # Codemagic или тегом: `git tag build-1 && git push origin build-1`.
+    triggering:
+      events:
+        - tag
+      tag_patterns:
+        - pattern: 'build-*'
+          include: true
+      cancel_previous_builds: true
+
+    scripts:
+      - name: Сгенерировать Xcode-проект
+        script: |
+          set -e
+          cd App
+          python3 make_project.py
+
+      - name: Тесты пакета
+        # Гоняются на маке, а не на симуляторе: движок, корпус и строки от
+        # платформы не зависят, а лишний симулятор — это минуты на каждой сборке.
+        script: |
+          set -e
+          cd DeepamCore
+          swift test
+
+      - name: Подпись — сертификат и профили
+        # --certificate-key обязателен: без него fetch-signing-files выпускал бы
+        # НОВЫЙ distribution-сертификат на каждой сборке. У Apple лимит 3, у
+        # команды слоты уже заняты — сожгли бы последний. С ключом сертификат
+        # переиспользуется, создаётся только профиль.
+        script: |
+          set -e
+          if [ "$APP_STORE_APPLE_ID" = "CHANGE_ME_APP_STORE_APPLE_ID" ]; then
+            echo "ERROR: в codemagic.yaml не вписан APP_STORE_APPLE_ID — создай приложение в App Store Connect и подставь его Apple ID."
+            exit 1
+          fi
+          if [ -z "${CERTIFICATE_PRIVATE_KEY:-}" ]; then
+            echo "ERROR: CERTIFICATE_PRIVATE_KEY пуст — добавь группу app_store_vars к ЭТОМУ приложению (группы в Codemagic по-апповые)."
+            exit 1
+          fi
+          keychain initialize
+          for id in "$BUNDLE_ID" "$WIDGET_BUNDLE_ID"; do
+            echo "→ профиль для $id"
+            app-store-connect fetch-signing-files "$id" \
+              --type IOS_APP_STORE \
+              --certificate-key=@env:CERTIFICATE_PRIVATE_KEY \
+              --create
+          done
+          keychain add-certificates
+          cd App
+          xcode-project use-profiles
+
+      - name: Номер сборки = последний в TestFlight + 1
+        script: |
+          set -e
+          cd App
+          LATEST=$(app-store-connect get-latest-testflight-build-number "$APP_STORE_APPLE_ID" 2>/dev/null || echo "0")
+          agvtool new-version -all $(( ${LATEST:-0} + 1 ))
+
+      - name: Пакеты SPM
+        # build-ipa первым делом зовёт `xcodebuild -showBuildSettings`, а тот
+        # сначала качает пакеты (Firebase, RevenueCat, Amplitude, Facebook).
+        # 09.11 этот вызов упал, не выведя ни строки, — по логу не понять,
+        # что случилось. Здесь пакеты качаются отдельно: вывод виден, на
+        # зависание — 15 минут на попытку, на сбой сети — ещё две попытки с
+        # чистого листа. Дальше build-ipa берёт уже скачанное.
+        script: |
+          set -e
+          cd App
+          for attempt in 1 2 3; do
+            echo "→ SPM, попытка $attempt"
+            if perl -e 'alarm shift; exec @ARGV' 900 \
+                 xcodebuild -project Deepam.xcodeproj -scheme "$XCODE_SCHEME" \
+                   -resolvePackageDependencies; then
+              exit 0
+            fi
+            find ~/Library/Developer/Xcode/DerivedData -maxdepth 2 -path '*/Deepam-*/SourcePackages' -exec rm -rf {} + || true
+            sleep 30
+          done
+          echo "ERROR: пакеты SPM не скачались за три попытки"
+          exit 1
+
+      - name: Собрать .ipa
+        script: |
+          set -e
+          cd App
+          xcode-project build-ipa --project "Deepam.xcodeproj" --scheme "$XCODE_SCHEME"
+
+    artifacts:
+      - App/build/ios/ipa/*.ipa
+      - /tmp/xcodebuild_logs/*.log
+
+    publishing:
+      app_store_connect:
+        auth: integration
+        submit_to_testflight: true
+
+  # Вариант без интеграции аккаунта: ключ App Store Connect лежит в переменных группы
+  # app_store_vars (APP_STORE_CONNECT_ISSUER_ID, APP_STORE_CONNECT_KEY_IDENTIFIER,
+  # APP_STORE_CONNECT_PRIVATE_KEY — содержимое файла .p8, секретная). Утилита
+  # app-store-connect читает эти переменные сама. Запуск только вручную.
+  ios-testflight-env:
+    name: Deepam iOS → TestFlight (ключ API из переменных)
+    instance_type: mac_mini_m2
+    # С Firebase сборка заметно дольше: репозиторий SDK тянется целиком, а его
+    # ядро собирается из исходников. 60 минут впритык, потолок с запасом
+    # ничего не стоит — платится только реальное время.
+    max_build_duration: 90
+
+    environment:
+      groups:
+        # Переменные группы:
+        #   CERTIFICATE_PRIVATE_KEY — приватный ключ distribution-сертификата
+        #     команды;
+        #   GA_MP_SECRET — секрет Measurement Protocol из GA4 для «пульса»
+        #     виджета (защищённая). xcodebuild видит переменные окружения как
+        #     настройки сборки и подставляет её в WidgetInfo.plist. Нет её —
+        #     сборка пройдёт, а пульс будет молчать.
+        # APP_STORE_CONNECT_* сюда класть НЕ НАДО: их подставляет интеграция
+        # `Astonio` (см. integrations), и дубликаты из группы с ней конфликтуют.
+        # Группы в Codemagic по-апповые — создать у ЭТОГО приложения.
+        - app_store_vars
+      # NB: блока `ios_signing` здесь намеренно НЕТ. Он отрабатывает до scripts
+      # и умеет только забрать готовый профиль — на первой сборке, когда профиля
+      # ещё не существует, падает с «No matching profiles found» раньше, чем наш
+      # шаг подписи успел бы его создать.
+      vars:
+        BUNDLE_ID: "com.astonio.deepam"
+        WIDGET_BUNDLE_ID: "com.astonio.deepam.widgets"
+        # Числовой Apple ID приложения из App Store Connect (App Information → General → Apple ID).
+        # Пока приложения в ASC нет — заглушка; сборка с ней нарочно не стартует (см. шаг подписи).
+        APP_STORE_APPLE_ID: "CHANGE_ME_APP_STORE_APPLE_ID"
+        XCODE_SCHEME: "Deepam"
+      # Первая сборка идёт на `latest` — последний стабильный Xcode, который знает
+      # Codemagic: с прибитым номером, которого у них нет, сборка не стартует
+      # вовсе, и первый запуск терялся бы на этом. Когда сборка пройдёт, номер
+      # можно прибить (например `27.1`): только с SDK iOS 27.1 приложение на
+      # iPhone Duo идёт край в край на обоих экранах, на SDK 26 оно там
+      # открывается окном обычного iPhone посреди пустоты. Прибивают номер,
+      # а не оставляют `latest`, чтобы сборку не сломал Xcode, о выходе
+      # которого мы не знали.
+      xcode: latest
+
+    scripts:
+      - name: Сгенерировать Xcode-проект
+        script: |
+          set -e
+          cd App
+          python3 make_project.py
+
+      - name: Тесты пакета
+        # Гоняются на маке, а не на симуляторе: движок, корпус и строки от
+        # платформы не зависят, а лишний симулятор — это минуты на каждой сборке.
+        script: |
+          set -e
+          cd DeepamCore
+          swift test
+
+      - name: Подпись — сертификат и профили
+        # --certificate-key обязателен: без него fetch-signing-files выпускал бы
+        # НОВЫЙ distribution-сертификат на каждой сборке. У Apple лимит 3, у
+        # команды слоты уже заняты — сожгли бы последний. С ключом сертификат
+        # переиспользуется, создаётся только профиль.
+        script: |
+          set -e
+          if [ "$APP_STORE_APPLE_ID" = "CHANGE_ME_APP_STORE_APPLE_ID" ]; then
+            echo "ERROR: в codemagic.yaml не вписан APP_STORE_APPLE_ID — создай приложение в App Store Connect и подставь его Apple ID."
+            exit 1
+          fi
+          if [ -z "${CERTIFICATE_PRIVATE_KEY:-}" ]; then
+            echo "ERROR: CERTIFICATE_PRIVATE_KEY пуст — добавь группу app_store_vars к ЭТОМУ приложению (группы в Codemagic по-апповые)."
+            exit 1
+          fi
+          keychain initialize
+          for id in "$BUNDLE_ID" "$WIDGET_BUNDLE_ID"; do
+            echo "→ профиль для $id"
+            app-store-connect fetch-signing-files "$id" \
+              --type IOS_APP_STORE \
+              --certificate-key=@env:CERTIFICATE_PRIVATE_KEY \
+              --create
+          done
+          keychain add-certificates
+          cd App
+          xcode-project use-profiles
+
+      - name: Номер сборки = последний в TestFlight + 1
+        script: |
+          set -e
+          cd App
+          LATEST=$(app-store-connect get-latest-testflight-build-number "$APP_STORE_APPLE_ID" 2>/dev/null || echo "0")
+          agvtool new-version -all $(( ${LATEST:-0} + 1 ))
+
+      - name: Пакеты SPM
+        # build-ipa первым делом зовёт `xcodebuild -showBuildSettings`, а тот
+        # сначала качает пакеты (Firebase, RevenueCat, Amplitude, Facebook).
+        # 09.11 этот вызов упал, не выведя ни строки, — по логу не понять,
+        # что случилось. Здесь пакеты качаются отдельно: вывод виден, на
+        # зависание — 15 минут на попытку, на сбой сети — ещё две попытки с
+        # чистого листа. Дальше build-ipa берёт уже скачанное.
+        script: |
+          set -e
+          cd App
+          for attempt in 1 2 3; do
+            echo "→ SPM, попытка $attempt"
+            if perl -e 'alarm shift; exec @ARGV' 900 \
+                 xcodebuild -project Deepam.xcodeproj -scheme "$XCODE_SCHEME" \
+                   -resolvePackageDependencies; then
+              exit 0
+            fi
+            find ~/Library/Developer/Xcode/DerivedData -maxdepth 2 -path '*/Deepam-*/SourcePackages' -exec rm -rf {} + || true
+            sleep 30
+          done
+          echo "ERROR: пакеты SPM не скачались за три попытки"
+          exit 1
+
+      - name: Собрать .ipa
+        script: |
+          set -e
+          cd App
+          xcode-project build-ipa --project "Deepam.xcodeproj" --scheme "$XCODE_SCHEME"
+
+    artifacts:
+      - App/build/ios/ipa/*.ipa
+      - /tmp/xcodebuild_logs/*.log
+
+    publishing:
+      app_store_connect:
+        api_key: $APP_STORE_CONNECT_PRIVATE_KEY
+        key_id: $APP_STORE_CONNECT_KEY_IDENTIFIER
+        issuer_id: $APP_STORE_CONNECT_ISSUER_ID
+        submit_to_testflight: true

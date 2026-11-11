@@ -1,0 +1,122 @@
+name: CI
+
+# Сборка и тесты на macOS: компилятора Swift на ПК разработчика нет, поэтому
+# проверка идёт здесь. Лог каждого прогона публикуется в ветку ci-logs (в
+# репозитории публичном, секретов в логах нет), чтобы его можно было прочитать
+# без входа в GitHub.
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+# Прогоны идут по очереди: оба задания пишут логи в одну ветку, и два прогона
+# одновременно разошлись бы на пуше. Лишние ждущие прогоны GitHub отбрасывает сам.
+concurrency:
+  group: ci
+  cancel-in-progress: false
+
+jobs:
+  package:
+    name: Пакет (тесты + сборка под iOS)
+    runs-on: macos-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Версии
+        run: |
+          xcodebuild -version || true
+          swift --version || true
+          xcode-select -p || true
+
+      - name: swift test
+        working-directory: DeepamCore
+        run: |
+          set -o pipefail
+          swift test 2>&1 | tee "$GITHUB_WORKSPACE/test.log"
+
+      - name: Сборка пакета под iOS-симулятор
+        if: always()
+        working-directory: DeepamCore
+        run: |
+          set -o pipefail
+          xcodebuild -scheme DeepamCore-Package \
+            -destination 'generic/platform=iOS Simulator' \
+            -skipPackagePluginValidation CODE_SIGNING_ALLOWED=NO build 2>&1 | tee "$GITHUB_WORKSPACE/ios.log"
+
+      - name: Опубликовать логи
+        if: always()
+        env:
+          TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set +e
+          out="$RUNNER_TEMP/out"; mkdir -p "$out"
+          for f in test ios; do
+            if [ -f "$GITHUB_WORKSPACE/$f.log" ]; then
+              { echo "== $f: ошибки и итог =="; grep -nE "error:|warning: unre|Test run|Executed|BUILD|FAILED|failed|✘|passed after" "$GITHUB_WORKSPACE/$f.log" | tail -n 300; echo; echo "== $f: хвост =="; tail -n 120 "$GITHUB_WORKSPACE/$f.log"; } > "$out/package-$f.txt"
+            fi
+          done
+          { xcodebuild -version; swift --version; } > "$out/versions.txt" 2>&1
+          git config --global user.email "ci@users.noreply.github.com"
+          git config --global user.name "ci"
+          rm -rf "$RUNNER_TEMP/logs"
+          if git clone --depth 1 --branch ci-logs "https://x-access-token:${TOKEN}@github.com/${{ github.repository }}" "$RUNNER_TEMP/logs" 2>/dev/null; then :; else
+            mkdir -p "$RUNNER_TEMP/logs"; cd "$RUNNER_TEMP/logs"; git init -b ci-logs
+            git remote add origin "https://x-access-token:${TOKEN}@github.com/${{ github.repository }}"
+          fi
+          cd "$RUNNER_TEMP/logs"
+          mkdir -p "latest"; rm -f latest/package-*.txt latest/versions.txt
+          cp "$out"/* latest/ 2>/dev/null
+          echo "${{ github.sha }} run ${{ github.run_number }}" > latest/commit.txt
+          git add -A; git commit -m "log ${{ github.run_number }} ${{ github.sha }}"
+          git push origin ci-logs
+
+  app:
+    name: Приложение (проект Xcode под симулятор)
+    # После пакета: оба задания пишут в ветку ci-logs, и параллельный пуш
+    # разошёлся бы. `always()` — чтобы сборка приложения шла, даже если тест
+    # пакета упал: две проблемы лучше видеть сразу, а не по очереди.
+    needs: package
+    if: always()
+    runs-on: macos-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Сгенерировать проект Xcode
+        working-directory: App
+        run: python3 make_project.py
+
+      - name: Сборка приложения и расширения виджета
+        run: |
+          set -o pipefail
+          xcodebuild -project App/Deepam.xcodeproj -scheme Deepam             -destination 'generic/platform=iOS Simulator' -configuration Debug             -skipPackagePluginValidation -skipMacroValidation             CODE_SIGNING_ALLOWED=NO CODE_SIGNING_REQUIRED=NO build 2>&1 | tee "$GITHUB_WORKSPACE/app.log"
+
+      - name: Опубликовать лог
+        if: always()
+        env:
+          TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set +e
+          out="$RUNNER_TEMP/out"; mkdir -p "$out"
+          if [ -f "$GITHUB_WORKSPACE/app.log" ]; then
+            { echo "== app: ошибки и итог =="; grep -nE "error:|BUILD|FAILED|Resolve Package|fatal" "$GITHUB_WORKSPACE/app.log" | tail -n 300; echo; echo "== app: хвост =="; tail -n 80 "$GITHUB_WORKSPACE/app.log" | cut -c1-400; } > "$out/app-build.txt"
+          else
+            echo "лога нет: шаг сборки не дошёл до xcodebuild" > "$out/app-build.txt"
+          fi
+          git config --global user.email "ci@users.noreply.github.com"
+          git config --global user.name "ci"
+          rm -rf "$RUNNER_TEMP/logs"
+          if git clone --depth 1 --branch ci-logs "https://x-access-token:${TOKEN}@github.com/${{ github.repository }}" "$RUNNER_TEMP/logs" 2>/dev/null; then :; else
+            mkdir -p "$RUNNER_TEMP/logs"; cd "$RUNNER_TEMP/logs"; git init -b ci-logs
+            git remote add origin "https://x-access-token:${TOKEN}@github.com/${{ github.repository }}"
+          fi
+          cd "$RUNNER_TEMP/logs"
+          mkdir -p latest; rm -f latest/app-build.txt
+          cp "$out/app-build.txt" latest/
+          git add -A; git commit -m "app log ${{ github.run_number }} ${{ github.sha }}"
+          git push origin ci-logs
