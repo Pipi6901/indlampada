@@ -1,172 +1,312 @@
 == test: ошибки и итог ==
-237:/Users/runner/work/indlampada/indlampada/DeepamCore/Tests/DeepamCoreTests/CorpusTests.swift:71:59: error: cannot convert value of type 'String' to expected argument type 'Comment?'
-241:    |                                                           `- error: cannot convert value of type 'String' to expected argument type 'Comment?'
-245:/Users/runner/work/indlampada/indlampada/DeepamCore/Tests/DeepamCoreTests/CorpusTests.swift:72:70: error: cannot convert value of type 'String' to expected argument type 'Comment?'
-249:    |                                                                      `- error: cannot convert value of type 'String' to expected argument type 'Comment?'
-253:/Users/runner/work/indlampada/indlampada/DeepamCore/Tests/DeepamCoreTests/CorpusTests.swift:105:109: error: cannot convert value of type 'String' to expected argument type 'Comment?'
-257:    |                                                                                                             `- error: cannot convert value of type 'String' to expected argument type 'Comment?'
-261:/Users/runner/work/indlampada/indlampada/DeepamCore/Tests/DeepamCoreTests/CorpusTests.swift:120:53: error: cannot convert value of type 'String' to expected argument type 'Comment?'
-265:    |                                                   `- error: cannot convert value of type 'String' to expected argument type 'Comment?'
-269:/Users/runner/work/indlampada/indlampada/DeepamCore/Tests/DeepamCoreTests/CorpusTests.swift:71:59: error: cannot convert value of type 'String' to expected argument type 'Comment?'
-273:    |                                                           `- error: cannot convert value of type 'String' to expected argument type 'Comment?'
-277:/Users/runner/work/indlampada/indlampada/DeepamCore/Tests/DeepamCoreTests/CorpusTests.swift:72:70: error: cannot convert value of type 'String' to expected argument type 'Comment?'
-281:    |                                                                      `- error: cannot convert value of type 'String' to expected argument type 'Comment?'
-285:/Users/runner/work/indlampada/indlampada/DeepamCore/Tests/DeepamCoreTests/CorpusTests.swift:105:109: error: cannot convert value of type 'String' to expected argument type 'Comment?'
-289:    |                                                                                                             `- error: cannot convert value of type 'String' to expected argument type 'Comment?'
-293:/Users/runner/work/indlampada/indlampada/DeepamCore/Tests/DeepamCoreTests/CorpusTests.swift:120:53: error: cannot convert value of type 'String' to expected argument type 'Comment?'
-297:    |                                                   `- error: cannot convert value of type 'String' to expected argument type 'Comment?'
-301:/Users/runner/work/indlampada/indlampada/DeepamCore/Tests/DeepamCoreTests/CorpusTests.swift:71:59: error: cannot convert value of type 'String' to expected argument type 'Comment?'
-305:    |                                                           `- error: cannot convert value of type 'String' to expected argument type 'Comment?'
-309:/Users/runner/work/indlampada/indlampada/DeepamCore/Tests/DeepamCoreTests/CorpusTests.swift:72:70: error: cannot convert value of type 'String' to expected argument type 'Comment?'
-313:    |                                                                      `- error: cannot convert value of type 'String' to expected argument type 'Comment?'
-317:/Users/runner/work/indlampada/indlampada/DeepamCore/Tests/DeepamCoreTests/CorpusTests.swift:105:109: error: cannot convert value of type 'String' to expected argument type 'Comment?'
-321:    |                                                                                                             `- error: cannot convert value of type 'String' to expected argument type 'Comment?'
-325:/Users/runner/work/indlampada/indlampada/DeepamCore/Tests/DeepamCoreTests/CorpusTests.swift:120:53: error: cannot convert value of type 'String' to expected argument type 'Comment?'
-329:    |                                                   `- error: cannot convert value of type 'String' to expected argument type 'Comment?'
-333:/Users/runner/work/indlampada/indlampada/DeepamCore/Tests/DeepamCoreTests/CorpusTests.swift:71:59: error: cannot convert value of type 'String' to expected argument type 'Comment?'
-337:    |                                                           `- error: cannot convert value of type 'String' to expected argument type 'Comment?'
-341:/Users/runner/work/indlampada/indlampada/DeepamCore/Tests/DeepamCoreTests/CorpusTests.swift:72:70: error: cannot convert value of type 'String' to expected argument type 'Comment?'
-345:    |                                                                      `- error: cannot convert value of type 'String' to expected argument type 'Comment?'
-349:/Users/runner/work/indlampada/indlampada/DeepamCore/Tests/DeepamCoreTests/CorpusTests.swift:105:109: error: cannot convert value of type 'String' to expected argument type 'Comment?'
-353:    |                                                                                                             `- error: cannot convert value of type 'String' to expected argument type 'Comment?'
-357:/Users/runner/work/indlampada/indlampada/DeepamCore/Tests/DeepamCoreTests/CorpusTests.swift:120:53: error: cannot convert value of type 'String' to expected argument type 'Comment?'
-361:    |                                                   `- error: cannot convert value of type 'String' to expected argument type 'Comment?'
-365:/Users/runner/work/indlampada/indlampada/DeepamCore/Tests/DeepamCoreTests/CorpusTests.swift:71:59: error: cannot convert value of type 'String' to expected argument type 'Comment?'
-369:    |                                                           `- error: cannot convert value of type 'String' to expected argument type 'Comment?'
-373:/Users/runner/work/indlampada/indlampada/DeepamCore/Tests/DeepamCoreTests/CorpusTests.swift:72:70: error: cannot convert value of type 'String' to expected argument type 'Comment?'
-377:    |                                                                      `- error: cannot convert value of type 'String' to expected argument type 'Comment?'
-381:/Users/runner/work/indlampada/indlampada/DeepamCore/Tests/DeepamCoreTests/CorpusTests.swift:105:109: error: cannot convert value of type 'String' to expected argument type 'Comment?'
-385:    |                                                                                                             `- error: cannot convert value of type 'String' to expected argument type 'Comment?'
-389:/Users/runner/work/indlampada/indlampada/DeepamCore/Tests/DeepamCoreTests/CorpusTests.swift:120:53: error: cannot convert value of type 'String' to expected argument type 'Comment?'
-393:    |                                                   `- error: cannot convert value of type 'String' to expected argument type 'Comment?'
-397:/Users/runner/work/indlampada/indlampada/DeepamCore/Tests/DeepamCoreTests/CorpusTests.swift:71:59: error: cannot convert value of type 'String' to expected argument type 'Comment?'
-401:    |                                                           `- error: cannot convert value of type 'String' to expected argument type 'Comment?'
-405:/Users/runner/work/indlampada/indlampada/DeepamCore/Tests/DeepamCoreTests/CorpusTests.swift:72:70: error: cannot convert value of type 'String' to expected argument type 'Comment?'
-409:    |                                                                      `- error: cannot convert value of type 'String' to expected argument type 'Comment?'
-413:/Users/runner/work/indlampada/indlampada/DeepamCore/Tests/DeepamCoreTests/CorpusTests.swift:105:109: error: cannot convert value of type 'String' to expected argument type 'Comment?'
-417:    |                                                                                                             `- error: cannot convert value of type 'String' to expected argument type 'Comment?'
-421:/Users/runner/work/indlampada/indlampada/DeepamCore/Tests/DeepamCoreTests/CorpusTests.swift:120:53: error: cannot convert value of type 'String' to expected argument type 'Comment?'
-425:    |                                                   `- error: cannot convert value of type 'String' to expected argument type 'Comment?'
-533:error: fatalError
+1114:	 Executed 0 tests, with 0 failures (0 unexpected) in 0.000 (0.004) seconds
+1115:◇ Test run started.
+1377:✔ Test "каждая плитка набора закрыта без подписки" passed after 0.142 seconds.
+1378:✔ Test "у каждой плитки набора есть подпись" with 1 test case passed after 0.142 seconds.
+1379:✔ Test "ветка показывает все шесть плиток" with 4 test cases passed after 0.142 seconds.
+1380:✔ Test "дни в году по часам в ленте" passed after 0.142 seconds.
+1381:✔ Test "у каждой цели есть обе подписи" with 1 test case passed after 0.143 seconds.
+1382:✔ Test "короткий текст остаётся как есть" passed after 0.143 seconds.
+1383:✔ Test "ранняя точка не обрывает стих" passed after 0.143 seconds.
+1384:✔ Test "предпочитает конец предложения" passed after 0.143 seconds.
+1385:✔ Test "длинный обрывается по границе слова" passed after 0.143 seconds.
+1386:✔ Test "виджет пропал — через четыре дня" passed after 0.143 seconds.
+1387:✔ Test "вторую поверхность предлагаем, только когда стоит одна" passed after 0.143 seconds.
+1388:✔ Test "цель сохраняется" passed after 0.143 seconds.
+1389:✔ Test "ночь сдвигается на утро, день не трогается" passed after 0.143 seconds.
+1390:✔ Test "прошедшее время сегодня переносится на завтра" passed after 0.143 seconds.
+1391:✔ Test "возврат только без виджета и стиха дня" passed after 0.143 seconds.
+1392:✔ Test "стих дня на месяц вперёд в выбранное время" passed after 0.143 seconds.
+1393:✔ Test "возврат через три и семь дней в дневное время" passed after 0.143 seconds.
+1394:✔ Test "текст стиха совпадает со стихом дня" passed after 0.143 seconds.
+1395:✔ Test "вторая поверхность — в срок и с инструкцией" passed after 0.143 seconds.
+1396:✔ Test "вид узнаётся по идентификатору" passed after 0.143 seconds.
+1397:✔ Test "ни один ключ не остался без строки" with 1 test case passed after 0.143 seconds.
+1398:✔ Test "число со словом в нужной форме" passed after 0.143 seconds.
+1399:✔ Test "названия состояний отличаются от идентификатора" passed after 0.143 seconds.
+1400:✔ Test "образцы стихов взяты из корпуса" passed after 0.143 seconds.
+1401:✔ Test "в строках нет посторонних подстановок" with 1 test case passed after 0.143 seconds.
+1402:✔ Test "ссылки на условия и политику ведут наружу" passed after 0.143 seconds.
+1403:✔ Test "у каждого состояния из корпуса есть название" with 1 test case passed after 0.143 seconds.
+1404:✔ Test "пустые и выключенные значения пропускаются" passed after 0.143 seconds.
+1405:✔ Test "рассылка с вкладкой и пейволлом" passed after 0.143 seconds.
+1406:✔ Test "предложение открывает пейволл" passed after 0.143 seconds.
+1407:✔ Test "в каждой теме не меньше пяти стихов" passed after 0.143 seconds.
+1408:✔ Test "язык устройства определяется по списку предпочтений" passed after 0.143 seconds.
+1409:✔ Test "несколько тем складываются" passed after 0.143 seconds.
+1410:✔ Test "без оригинала в карточке показывается только перевод" passed after 0.143 seconds.
+1411:✔ Test "своё напоминание не считается рассылкой" passed after 0.143 seconds.
+1412:✔ Test "перевод показывается с оригиналом или без него" passed after 0.143 seconds.
+1413:✔ Test "идентификаторы уникальны, подписи совпадают с идентификаторами" passed after 0.143 seconds.
+1414:✔ Test "подстановки работают" passed after 0.144 seconds.
+1415:✔ Test "фильтр по темам сужает пул, не ломая его" passed after 0.143 seconds.
+1416:✔ Test "текст для уведомления — перевод" passed after 0.143 seconds.
+1417:✔ Test "в строках нет следов прежних приложений" with 1 test case passed after 0.144 seconds.
+1418:✔ Test "письмо определяется по знакам деванагари" passed after 0.143 seconds.
+1419:✔ Test "в санскрите только деванагари, пробел и перенос" passed after 0.143 seconds.
+1420:✔ Test "у карточек есть текст и подпись" with 1 test case passed after 0.143 seconds.
+1421:✔ Test "бандл каждого языка читается" with 1 test case passed after 0.143 seconds.
+1422:✔ Test "стихи существуют, и ни один не входит в корпус дважды" passed after 0.143 seconds.
+1423:✔ Test "у каждого стиха санскрит доведён до конца" passed after 0.143 seconds.
+1424:✔ Test "пустой набор тем не сужает пул" passed after 0.143 seconds.
+1425:✔ Test "оригинал лежит в original, перевод в text" passed after 0.143 seconds.
+1426:✔ Test "у каждой карточки есть контекст" with 1 test case passed after 0.143 seconds.
+1427:✔ Test "карточка не обрывается на запятой" with 1 test case passed after 0.143 seconds.
+1428:✔ Test "стих дня выключен, статистика включена по умолчанию" passed after 0.143 seconds.
+1429:✔ Test "настройки уведомлений и статистики переживают перезапуск" passed after 0.143 seconds.
+1430:✔ Test "первый ряд наборов доступен без подписки" passed after 0.143 seconds.
+1431:✔ Test "у каждой альтернативной иконки есть имя набора" passed after 0.143 seconds.
+1432:✔ Test "подписка открывает всё" passed after 0.143 seconds.
+1433:✔ Test "экран блокировки не применяет цвет набора" passed after 0.143 seconds.
+1434:✔ Test "виджет на экране блокировки отмечается сам" passed after 0.144 seconds.
+1435:✔ Test "у каждой поверхности три шага с подсказками" passed after 0.143 seconds.
+1436:✔ Test "часы не попадают на экран" passed after 0.143 seconds.
+1437:✔ Test "убранный виджет снимает отметку, ручные остаются" passed after 0.144 seconds.
+1438:✔ Test "отметку можно снять" passed after 0.143 seconds.
+1439:✔ Test "разделы покрывают все поверхности версии" passed after 0.145 seconds.
+1440:✔ Test "на чистой установке ни одной поверхности" passed after 0.146 seconds.
+1441:✔ Test "ночь бесплатна" passed after 0.146 seconds.
+1442:✔ Test "у каждой иконки есть имя изображения" passed after 0.146 seconds.
+1443:✔ Test "настройки оформления переживают перезапуск" passed after 0.147 seconds.
+1444:✔ Test "настройки переживают перезапуск" passed after 0.146 seconds.
+1445:✔ Test "когда всё поставлено, предлагать нечего" passed after 0.146 seconds.
+1446:✔ Test "следующая поверхность идёт по порядку сложности" passed after 0.146 seconds.
+1447:✔ Test "основная иконка не имеет альтернативного имени" passed after 0.146 seconds.
+1448:✔ Test "стиль задаётся для каждой области отдельно" passed after 0.147 seconds.
+1449:✔ Test "продлевающаяся подписка не гаснет по старой дате" passed after 0.146 seconds.
+1450:✔ Test "без права ничего не действует" passed after 0.146 seconds.
+1451:✔ Test "справа налево не пишется ни один язык" passed after 0.146 seconds.
+1452:✔ Test "дата в макете переводится" passed after 0.147 seconds.
+1453:✔ Test "старый снимок без признака триала читается" passed after 0.146 seconds.
+1454:✔ Test "санскритский оригинал по умолчанию выключен и включается в настройках" passed after 0.146 seconds.
+1455:✔ Test "откат и снимок переживают перезапуск" passed after 0.146 seconds.
+1456:✔ Test "виджет отпускает платное в момент конца подписки" passed after 0.146 seconds.
+1457:✔ Test "отменённый триал узнаётся" passed after 0.146 seconds.
+1458:✔ Test "без платного откат ничего не меняет" passed after 0.146 seconds.
+1459:✔ Test "неизвестный статус не отнимает платное" passed after 0.146 seconds.
+1460:✔ Test "открытия в один день считаются одним" passed after 0.146 seconds.
+1461:✔ Test "замена платного набора всегда бесплатна" passed after 0.146 seconds.
+1462:✔ Test "отменённый триал действует до конца недели" passed after 0.146 seconds.
+1463:✔ Test "третий день с виджетом — пора" passed after 0.146 seconds.
+1464:✔ Test "без виджета не спрашиваем" passed after 0.146 seconds.
+1465:✔ Test "в той же версии второй раз не спрашиваем" passed after 0.146 seconds.
+1466:✔ Test "новая версия ждёт 90 дней" passed after 0.146 seconds.
+1467:✔ Test "шаг между соседями не постоянен" passed after 0.146 seconds.
+1468:✔ Test "бесплатное оформление виджету не мешает" passed after 0.146 seconds.
+1469:✔ Test "порядок листания меняется каждый день" passed after 0.146 seconds.
+1470:✔ Test "стих дня разный в соседние дни" passed after 0.146 seconds.
+1471:✔ Test "нулевое смещение — это стих дня" with 6 test cases passed after 0.146 seconds.
+1472:✔ Test "индекс всегда внутри пула" with 4 test cases passed after 0.146 seconds.
+1473:✔ Test "счёт сохраняется в настройках" passed after 0.146 seconds.
+1474:✔ Test "свайп вперёд и назад возвращает туда же" passed after 0.146 seconds.
+1475:✔ Test "номер дня растёт на единицу в сутки" passed after 0.146 seconds.
+1476:✔ Test "откат снимает только платное" passed after 0.147 seconds.
+1477:✔ Test "стих дня детерминирован и не зависит от объекта" passed after 0.146 seconds.
+1478:✔ Test "разные зёрна дают разный порядок" passed after 0.146 seconds.
+1479:✔ Test "после полного круга последовательность повторяется" passed after 0.146 seconds.
+1480:✔ Test "отрицательные позиции продолжают тот же круг" passed after 0.146 seconds.
+1481:✔ Test "накрывает всю область ровно один раз" with 9 test cases passed after 0.146 seconds.
+1482:✔ Test "свайп вперёд не показывает завтрашний стих дня" passed after 0.146 seconds.
+1483:✔ Test "полный круг проходит пул без повторов" passed after 0.146 seconds.
+1484:✔ Test "одно зерно — одна и та же последовательность" passed after 0.146 seconds.
+1485:✔ Test "события экрана и согласия" passed after 0.146 seconds.
+1486:✔ Test "пауза перед лентой бесплатна" passed after 0.147 seconds.
+1487:✔ Test "у каждого тарифа свой срок триала" passed after 0.146 seconds.
+1488:✔ Test "кнопка и подпись называют срок триала именно этого тарифа" passed after 0.146 seconds.
+1489:✔ Test "без триала кнопка называет цену, а подпись период" passed after 0.146 seconds.
+1490:✔ Test "на каждом языке в надпись подставляется срок" with 1 test case passed after 0.146 seconds.
+1491:✔ Test "имена годятся для GA4" passed after 0.146 seconds.
+1492:✔ Test "отметка и согласие сохраняются" passed after 0.146 seconds.
+1493:✔ Test "первая перепись только запоминает" passed after 0.146 seconds.
+1494:✔ Test "покупка несёт сумму числом" passed after 0.146 seconds.
+1495:✔ Test "отрицательный срок считается отсутствием триала" passed after 0.146 seconds.
+1496:✔ Test "экран ждёт тех, кто обновился" passed after 0.146 seconds.
+1497:✔ Test "вариант пейволла" passed after 0.146 seconds.
+1498:✔ Test "поставленный и снятый виджет" passed after 0.146 seconds.
+1499:✔ Suite "Намерения и подсветка платного" passed after 0.153 seconds.
+1500:✔ Suite "Текст для экрана блокировки" passed after 0.153 seconds.
+1501:✔ Suite "Уведомления: что и когда" passed after 0.153 seconds.
+1502:✔ Suite "Строки интерфейса" passed after 0.154 seconds.
+1503:✔ Suite "Действия рассылки" passed after 0.154 seconds.
+1504:✔ Suite "Корпус" passed after 0.154 seconds.
+1505:✔ Suite "Отметки поверхностей по факту" passed after 0.153 seconds.
+1506:✔ Suite "Настройки и поверхности" passed after 0.153 seconds.
+1507:✔ Suite "Подписка там, куда RevenueCat не дотягивается" passed after 0.153 seconds.
+1508:✔ Suite "Просьба об оценке" passed after 0.153 seconds.
+1509:✔ Suite "Перестановка индексов" passed after 0.153 seconds.
+1510:✔ Suite "Движок выдачи" passed after 0.153 seconds.
+1511:✔ Suite "«Что нового» и согласие на новости" passed after 0.153 seconds.
+1512:✔ Suite "Платный экран: тарифы и триал" passed after 0.153 seconds.
+1513:✔ Test "сняли всё" passed after 0.147 seconds.
+1514:✔ Test "экземпляры считаются поштучно" passed after 0.147 seconds.
+1515:✔ Suite "События аналитики" passed after 0.154 seconds.
+1516:✔ Test "снятие фильтра возвращает полный пул" passed after 0.544 seconds.
+1517:✔ Test "тот же день ничего не сбрасывает" passed after 0.544 seconds.
+1518:✔ Test "у каждой карточки при листании есть контекст" passed after 0.544 seconds.
+1519:✔ Test "смена языка сохраняет отрывок" passed after 0.544 seconds.
+1520:✔ Test "тап по дате возвращает к стиху дня с любой глубины" passed after 0.544 seconds.
+1521:✔ Test "новый день сбрасывает смещение и меняет стих" passed after 0.544 seconds.
+1522:✔ Test "полный круг по пулу не повторяется" passed after 0.544 seconds.
+1523:✔ Test "фильтр по темам сужает пул и сбрасывает смещение" passed after 0.544 seconds.
+1524:✔ Test "свайп вверх и вниз двигают смещение в разные стороны" passed after 0.543 seconds.
+1525:✔ Test "на старте показан стих дня" passed after 0.544 seconds.
+1526:✔ Test "сюжет остаётся в кадре" passed after 0.544 seconds.
+1527:✔ Test "пейзаж держит низ картинки" passed after 0.544 seconds.
+1528:✔ Test "листание назад тоже считается листанием" passed after 0.544 seconds.
+1529:✔ Test "на обычном iPhone картинка почти не режется" passed after 0.544 seconds.
+1530:✔ Test "картинка закрывает весь экран" with 5 test cases passed after 0.544 seconds.
+1531:✔ Test "вариант выбирается по пропорциям" passed after 0.544 seconds.
+1532:✔ Test "оригинал крупнее перевода" passed after 0.542 seconds.
+1533:✔ Test "поправка выравнивает видимый размер" with 9 test cases passed after 0.542 seconds.
+1534:✔ Test "шрифт санскрита покрывает весь корпус" passed after 0.542 seconds.
+1535:✔ Test "шрифт санскрита находится" passed after 0.542 seconds.
+1536:✔ Test "кегль падает с длиной, но не ниже порога" passed after 0.543 seconds.
+1537:✔ Test "ось веса двигает начертание" with 8 test cases passed after 0.543 seconds.
+1538:✔ Test "высота строки одна для всех начертаний" with 9 test cases passed after 0.543 seconds.
+1539:✔ Test "одинокий оригинал крупнее парного" passed after 0.543 seconds.
+1540:✔ Test "в шрифте санскрита есть нужные знаки" passed after 0.543 seconds.
+1541:✔ Test "шрифт создаётся из своего семейства" with 8 test cases passed after 0.543 seconds.
+1542:✔ Test "масштаб уменьшает оба кегля" passed after 0.543 seconds.
+1543:✔ Test "сразу после паузы она не показывается снова" passed after 0.540 seconds.
+1544:✔ Test "адрес возврата доживает до кнопки" passed after 0.540 seconds.
+1545:✔ Test "показ не задерживает действие" passed after 0.540 seconds.
+1546:✔ Test "в окне тишины пауза не показывается, а отскакивает в соцсеть" passed after 0.540 seconds.
+1547:✔ Test "без адреса пауза всё равно показывается" passed after 0.540 seconds.
+1548:✔ Test "по истечении окна пауза показывается снова" passed after 0.540 seconds.
+1549:✔ Test "уход мимо кнопки засчитывается" passed after 0.540 seconds.
+1550:✔ Suite "Фон под пропорции экрана" passed after 0.548 seconds.
+1551:✔ Suite "Экран «Сегодня»" passed after 0.548 seconds.
+1552:✔ Suite "Шрифты" passed after 0.548 seconds.
+1553:✔ Test "окно тишины видно из другого процесса" passed after 0.551 seconds.
+1554:✔ Suite "Пауза перед лентой" passed after 0.558 seconds.
+1555:✔ Test "оформление виджетов идёт через отдельный шаг переключения" passed after 0.420 seconds.
+1556:✔ Test "пройденный тур не запускается снова" passed after 0.421 seconds.
+1557:✔ Test "каждый шаг знает свою вкладку" passed after 0.421 seconds.
+1558:✔ Test "тур начинается со свайпа" passed after 0.420 seconds.
+1559:✔ Test "чужое действие шаг не закрывает" passed after 0.420 seconds.
+1560:✔ Test "шаги идут по порядку и заканчиваются" passed after 0.420 seconds.
+1561:✔ Test "повторный запуск не сбрасывает идущий тур" passed after 0.420 seconds.
+1562:✔ Suite "Обучающий тур" passed after 0.564 seconds.
+1563:✔ Test run with 166 tests in 20 suites passed after 0.565 seconds.
 
 == test: хвост ==
-103 |                 #expect(allowed, "\(card.id): U+\(String(scalar.value, radix: 16, uppercase: true))")
-104 |             }
-105 |             #expect(!original.hasPrefix(" ") && !original.hasSuffix(" ") && !original.hasSuffix("\n"), card.id)
-    |                                                                                                             `- error: cannot convert value of type 'String' to expected argument type 'Comment?'
-106 |             #expect(!original.contains("  "), "\(card.id): двойной пробел")
-107 |             #expect(!original.contains("\n\n"), "\(card.id): пустая строка")
-
-/Users/runner/work/indlampada/indlampada/DeepamCore/Tests/DeepamCoreTests/CorpusTests.swift:120:53: error: cannot convert value of type 'String' to expected argument type 'Comment?'
-118 |             let original = try #require(card.original)
-119 |             #expect(original.filter { $0 == "॥" }.count == verses, "\(card.id): знаков конца стиха не \(verses)")
-120 |             #expect(original.hasSuffix("॥"), card.id)
-    |                                                   `- error: cannot convert value of type 'String' to expected argument type 'Comment?'
-121 |             #expect(original.split(separator: "\n").count >= 2 * verses, "\(card.id): мало строк")
-122 |         }
-[310/435] Compiling RevenueCat Clock.swift
-[311/435] Compiling RevenueCat DateExtensions.swift
-[312/435] Compiling RevenueCat DateProvider.swift
-[313/435] Compiling RevenueCat ISODurationFormatter.swift
-[314/435] Compiling RevenueCat ISOPeriodFormatter.swift
-[315/435] Compiling RevenueCat TimingUtil.swift
-[316/435] Compiling RevenueCat Deprecations.swift
-[317/435] Compiling RevenueCat Either.swift
-[318/435] Compiling RevenueCat JWT.swift
-[319/435] Compiling RevenueCat PreferredLocalesProvider.swift
-[320/435] Compiling RevenueCat MacDevice.swift
-[321/435] Compiling RevenueCat MapAppStoreDetector.swift
-[322/435] Compiling RevenueCat Obsoletions.swift
-[323/435] Compiling RevenueCat PlatformInfo.swift
-[324/435] Compiling RevenueCat PriceFormatterProvider.swift
-[325/435] Compiling RevenueCat RateLimiter.swift
-[326/435] Compiling RevenueCat SandboxEnvironmentDetector.swift
-[327/435] Compiling RevenueCat StoreKitVersion.swift
-[328/435] Compiling RevenueCat SystemInfo.swift
-[329/435] Compiling RevenueCat APISourceFailover.swift
-[330/435] Compiling RevenueCat Audience.swift
-[331/435] Compiling RevenueCat AudiencesConfigProvider.swift
-[332/435] Compiling RevenueCat Backend.swift
-[333/435] Compiling RevenueCat BackendConfiguration.swift
-[334/435] Compiling RevenueCat BackendLanes.swift
-[335/460] Compiling DeepamCoreTests ReviewPromptTests.swift
-/Users/runner/work/indlampada/indlampada/DeepamCore/Tests/DeepamCoreTests/WhatsNewTests.swift:8:41: warning: '#require(_:_:)' is redundant because 'UserDefaults(suiteName: "whatsnew.\(UUID().uuidString)")' never equals 'nil' (from macro 'require')
- 6 | struct WhatsNewTests {
- 7 |     private func makeSettings() throws -> AppSettings {
- 8 |         AppSettings(store: try #require(UserDefaults(suiteName: "whatsnew.\(UUID().uuidString)")))
-   |                                         `- warning: '#require(_:_:)' is redundant because 'UserDefaults(suiteName: "whatsnew.\(UUID().uuidString)")' never equals 'nil' (from macro 'require')
- 9 |     }
-10 | 
-[336/460] Compiling DeepamCoreTests ShortTextTests.swift
-/Users/runner/work/indlampada/indlampada/DeepamCore/Tests/DeepamCoreTests/WhatsNewTests.swift:8:41: warning: '#require(_:_:)' is redundant because 'UserDefaults(suiteName: "whatsnew.\(UUID().uuidString)")' never equals 'nil' (from macro 'require')
- 6 | struct WhatsNewTests {
- 7 |     private func makeSettings() throws -> AppSettings {
- 8 |         AppSettings(store: try #require(UserDefaults(suiteName: "whatsnew.\(UUID().uuidString)")))
-   |                                         `- warning: '#require(_:_:)' is redundant because 'UserDefaults(suiteName: "whatsnew.\(UUID().uuidString)")' never equals 'nil' (from macro 'require')
- 9 |     }
-10 | 
-[337/460] Compiling DeepamCoreTests StringsTests.swift
-/Users/runner/work/indlampada/indlampada/DeepamCore/Tests/DeepamCoreTests/WhatsNewTests.swift:8:41: warning: '#require(_:_:)' is redundant because 'UserDefaults(suiteName: "whatsnew.\(UUID().uuidString)")' never equals 'nil' (from macro 'require')
- 6 | struct WhatsNewTests {
- 7 |     private func makeSettings() throws -> AppSettings {
- 8 |         AppSettings(store: try #require(UserDefaults(suiteName: "whatsnew.\(UUID().uuidString)")))
-   |                                         `- warning: '#require(_:_:)' is redundant because 'UserDefaults(suiteName: "whatsnew.\(UUID().uuidString)")' never equals 'nil' (from macro 'require')
- 9 |     }
-10 | 
-[338/460] Compiling DeepamCoreTests VerseEngineTests.swift
-/Users/runner/work/indlampada/indlampada/DeepamCore/Tests/DeepamCoreTests/WhatsNewTests.swift:8:41: warning: '#require(_:_:)' is redundant because 'UserDefaults(suiteName: "whatsnew.\(UUID().uuidString)")' never equals 'nil' (from macro 'require')
- 6 | struct WhatsNewTests {
- 7 |     private func makeSettings() throws -> AppSettings {
- 8 |         AppSettings(store: try #require(UserDefaults(suiteName: "whatsnew.\(UUID().uuidString)")))
-   |                                         `- warning: '#require(_:_:)' is redundant because 'UserDefaults(suiteName: "whatsnew.\(UUID().uuidString)")' never equals 'nil' (from macro 'require')
- 9 |     }
-10 | 
-[339/460] Compiling DeepamCoreTests WhatsNewTests.swift
-/Users/runner/work/indlampada/indlampada/DeepamCore/Tests/DeepamCoreTests/WhatsNewTests.swift:8:41: warning: '#require(_:_:)' is redundant because 'UserDefaults(suiteName: "whatsnew.\(UUID().uuidString)")' never equals 'nil' (from macro 'require')
- 6 | struct WhatsNewTests {
- 7 |     private func makeSettings() throws -> AppSettings {
- 8 |         AppSettings(store: try #require(UserDefaults(suiteName: "whatsnew.\(UUID().uuidString)")))
-   |                                         `- warning: '#require(_:_:)' is redundant because 'UserDefaults(suiteName: "whatsnew.\(UUID().uuidString)")' never equals 'nil' (from macro 'require')
- 9 |     }
-10 | 
-[340/460] Compiling DeepamUI AppTheme.swift
-/Users/runner/work/indlampada/indlampada/DeepamCore/Tests/DeepamCoreTests/RemindersTests.swift:157:41: warning: '#require(_:_:)' is redundant because 'UserDefaults(suiteName: "sync.tests." + UUID().uuidString)' never equals 'nil' (from macro 'require')
-155 | 
-156 |     private func makeSettings() throws -> AppSettings {
-157 |         AppSettings(store: try #require(UserDefaults(suiteName: "sync.tests." + UUID().uuidString)))
-    |                                         `- warning: '#require(_:_:)' is redundant because 'UserDefaults(suiteName: "sync.tests." + UUID().uuidString)' never equals 'nil' (from macro 'require')
-158 |     }
-159 | 
-[341/460] Compiling DeepamUI Background.swift
-/Users/runner/work/indlampada/indlampada/DeepamCore/Tests/DeepamCoreTests/RemindersTests.swift:157:41: warning: '#require(_:_:)' is redundant because 'UserDefaults(suiteName: "sync.tests." + UUID().uuidString)' never equals 'nil' (from macro 'require')
-155 | 
-156 |     private func makeSettings() throws -> AppSettings {
-157 |         AppSettings(store: try #require(UserDefaults(suiteName: "sync.tests." + UUID().uuidString)))
-    |                                         `- warning: '#require(_:_:)' is redundant because 'UserDefaults(suiteName: "sync.tests." + UUID().uuidString)' never equals 'nil' (from macro 'require')
-158 |     }
-159 | 
-[342/460] Compiling DeepamUI CoachOverlay.swift
-/Users/runner/work/indlampada/indlampada/DeepamCore/Tests/DeepamCoreTests/RemindersTests.swift:157:41: warning: '#require(_:_:)' is redundant because 'UserDefaults(suiteName: "sync.tests." + UUID().uuidString)' never equals 'nil' (from macro 'require')
-155 | 
-156 |     private func makeSettings() throws -> AppSettings {
-157 |         AppSettings(store: try #require(UserDefaults(suiteName: "sync.tests." + UUID().uuidString)))
-    |                                         `- warning: '#require(_:_:)' is redundant because 'UserDefaults(suiteName: "sync.tests." + UUID().uuidString)' never equals 'nil' (from macro 'require')
-158 |     }
-159 | 
-[343/460] Compiling DeepamUI Color+Hex.swift
-/Users/runner/work/indlampada/indlampada/DeepamCore/Tests/DeepamCoreTests/RemindersTests.swift:157:41: warning: '#require(_:_:)' is redundant because 'UserDefaults(suiteName: "sync.tests." + UUID().uuidString)' never equals 'nil' (from macro 'require')
-155 | 
-156 |     private func makeSettings() throws -> AppSettings {
-157 |         AppSettings(store: try #require(UserDefaults(suiteName: "sync.tests." + UUID().uuidString)))
-    |                                         `- warning: '#require(_:_:)' is redundant because 'UserDefaults(suiteName: "sync.tests." + UUID().uuidString)' never equals 'nil' (from macro 'require')
-158 |     }
-159 | 
-[344/460] Compiling DeepamUI Components.swift
-/Users/runner/work/indlampada/indlampada/DeepamCore/Tests/DeepamCoreTests/RemindersTests.swift:157:41: warning: '#require(_:_:)' is redundant because 'UserDefaults(suiteName: "sync.tests." + UUID().uuidString)' never equals 'nil' (from macro 'require')
-155 | 
-156 |     private func makeSettings() throws -> AppSettings {
-157 |         AppSettings(store: try #require(UserDefaults(suiteName: "sync.tests." + UUID().uuidString)))
-    |                                         `- warning: '#require(_:_:)' is redundant because 'UserDefaults(suiteName: "sync.tests." + UUID().uuidString)' never equals 'nil' (from macro 'require')
-158 |     }
-159 | 
-error: fatalError
+✔ Test "настройки переживают перезапуск" passed after 0.146 seconds.
+✔ Test "когда всё поставлено, предлагать нечего" passed after 0.146 seconds.
+✔ Test "следующая поверхность идёт по порядку сложности" passed after 0.146 seconds.
+✔ Test "основная иконка не имеет альтернативного имени" passed after 0.146 seconds.
+✔ Test "стиль задаётся для каждой области отдельно" passed after 0.147 seconds.
+✔ Test "продлевающаяся подписка не гаснет по старой дате" passed after 0.146 seconds.
+✔ Test "без права ничего не действует" passed after 0.146 seconds.
+✔ Test "справа налево не пишется ни один язык" passed after 0.146 seconds.
+✔ Test "дата в макете переводится" passed after 0.147 seconds.
+✔ Test "старый снимок без признака триала читается" passed after 0.146 seconds.
+✔ Test "санскритский оригинал по умолчанию выключен и включается в настройках" passed after 0.146 seconds.
+✔ Test "откат и снимок переживают перезапуск" passed after 0.146 seconds.
+✔ Test "виджет отпускает платное в момент конца подписки" passed after 0.146 seconds.
+✔ Test "отменённый триал узнаётся" passed after 0.146 seconds.
+✔ Test "без платного откат ничего не меняет" passed after 0.146 seconds.
+✔ Test "неизвестный статус не отнимает платное" passed after 0.146 seconds.
+✔ Test "открытия в один день считаются одним" passed after 0.146 seconds.
+✔ Test "замена платного набора всегда бесплатна" passed after 0.146 seconds.
+✔ Test "отменённый триал действует до конца недели" passed after 0.146 seconds.
+✔ Test "третий день с виджетом — пора" passed after 0.146 seconds.
+✔ Test "без виджета не спрашиваем" passed after 0.146 seconds.
+✔ Test "в той же версии второй раз не спрашиваем" passed after 0.146 seconds.
+✔ Test "новая версия ждёт 90 дней" passed after 0.146 seconds.
+✔ Test "шаг между соседями не постоянен" passed after 0.146 seconds.
+✔ Test "бесплатное оформление виджету не мешает" passed after 0.146 seconds.
+✔ Test "порядок листания меняется каждый день" passed after 0.146 seconds.
+✔ Test "стих дня разный в соседние дни" passed after 0.146 seconds.
+✔ Test "нулевое смещение — это стих дня" with 6 test cases passed after 0.146 seconds.
+✔ Test "индекс всегда внутри пула" with 4 test cases passed after 0.146 seconds.
+✔ Test "счёт сохраняется в настройках" passed after 0.146 seconds.
+✔ Test "свайп вперёд и назад возвращает туда же" passed after 0.146 seconds.
+✔ Test "номер дня растёт на единицу в сутки" passed after 0.146 seconds.
+✔ Test "откат снимает только платное" passed after 0.147 seconds.
+✔ Test "стих дня детерминирован и не зависит от объекта" passed after 0.146 seconds.
+✔ Test "разные зёрна дают разный порядок" passed after 0.146 seconds.
+✔ Test "после полного круга последовательность повторяется" passed after 0.146 seconds.
+✔ Test "отрицательные позиции продолжают тот же круг" passed after 0.146 seconds.
+✔ Test "накрывает всю область ровно один раз" with 9 test cases passed after 0.146 seconds.
+✔ Test "свайп вперёд не показывает завтрашний стих дня" passed after 0.146 seconds.
+✔ Test "полный круг проходит пул без повторов" passed after 0.146 seconds.
+✔ Test "одно зерно — одна и та же последовательность" passed after 0.146 seconds.
+✔ Test "события экрана и согласия" passed after 0.146 seconds.
+✔ Test "пауза перед лентой бесплатна" passed after 0.147 seconds.
+✔ Test "у каждого тарифа свой срок триала" passed after 0.146 seconds.
+✔ Test "кнопка и подпись называют срок триала именно этого тарифа" passed after 0.146 seconds.
+✔ Test "без триала кнопка называет цену, а подпись период" passed after 0.146 seconds.
+✔ Test "на каждом языке в надпись подставляется срок" with 1 test case passed after 0.146 seconds.
+✔ Test "имена годятся для GA4" passed after 0.146 seconds.
+✔ Test "отметка и согласие сохраняются" passed after 0.146 seconds.
+✔ Test "первая перепись только запоминает" passed after 0.146 seconds.
+✔ Test "покупка несёт сумму числом" passed after 0.146 seconds.
+✔ Test "отрицательный срок считается отсутствием триала" passed after 0.146 seconds.
+✔ Test "экран ждёт тех, кто обновился" passed after 0.146 seconds.
+✔ Test "вариант пейволла" passed after 0.146 seconds.
+✔ Test "поставленный и снятый виджет" passed after 0.146 seconds.
+✔ Suite "Намерения и подсветка платного" passed after 0.153 seconds.
+✔ Suite "Текст для экрана блокировки" passed after 0.153 seconds.
+✔ Suite "Уведомления: что и когда" passed after 0.153 seconds.
+✔ Suite "Строки интерфейса" passed after 0.154 seconds.
+✔ Suite "Действия рассылки" passed after 0.154 seconds.
+✔ Suite "Корпус" passed after 0.154 seconds.
+✔ Suite "Отметки поверхностей по факту" passed after 0.153 seconds.
+✔ Suite "Настройки и поверхности" passed after 0.153 seconds.
+✔ Suite "Подписка там, куда RevenueCat не дотягивается" passed after 0.153 seconds.
+✔ Suite "Просьба об оценке" passed after 0.153 seconds.
+✔ Suite "Перестановка индексов" passed after 0.153 seconds.
+✔ Suite "Движок выдачи" passed after 0.153 seconds.
+✔ Suite "«Что нового» и согласие на новости" passed after 0.153 seconds.
+✔ Suite "Платный экран: тарифы и триал" passed after 0.153 seconds.
+✔ Test "сняли всё" passed after 0.147 seconds.
+✔ Test "экземпляры считаются поштучно" passed after 0.147 seconds.
+✔ Suite "События аналитики" passed after 0.154 seconds.
+✔ Test "снятие фильтра возвращает полный пул" passed after 0.544 seconds.
+✔ Test "тот же день ничего не сбрасывает" passed after 0.544 seconds.
+✔ Test "у каждой карточки при листании есть контекст" passed after 0.544 seconds.
+✔ Test "смена языка сохраняет отрывок" passed after 0.544 seconds.
+✔ Test "тап по дате возвращает к стиху дня с любой глубины" passed after 0.544 seconds.
+✔ Test "новый день сбрасывает смещение и меняет стих" passed after 0.544 seconds.
+✔ Test "полный круг по пулу не повторяется" passed after 0.544 seconds.
+✔ Test "фильтр по темам сужает пул и сбрасывает смещение" passed after 0.544 seconds.
+✔ Test "свайп вверх и вниз двигают смещение в разные стороны" passed after 0.543 seconds.
+✔ Test "на старте показан стих дня" passed after 0.544 seconds.
+✔ Test "сюжет остаётся в кадре" passed after 0.544 seconds.
+✔ Test "пейзаж держит низ картинки" passed after 0.544 seconds.
+✔ Test "листание назад тоже считается листанием" passed after 0.544 seconds.
+✔ Test "на обычном iPhone картинка почти не режется" passed after 0.544 seconds.
+✔ Test "картинка закрывает весь экран" with 5 test cases passed after 0.544 seconds.
+✔ Test "вариант выбирается по пропорциям" passed after 0.544 seconds.
+✔ Test "оригинал крупнее перевода" passed after 0.542 seconds.
+✔ Test "поправка выравнивает видимый размер" with 9 test cases passed after 0.542 seconds.
+✔ Test "шрифт санскрита покрывает весь корпус" passed after 0.542 seconds.
+✔ Test "шрифт санскрита находится" passed after 0.542 seconds.
+✔ Test "кегль падает с длиной, но не ниже порога" passed after 0.543 seconds.
+✔ Test "ось веса двигает начертание" with 8 test cases passed after 0.543 seconds.
+✔ Test "высота строки одна для всех начертаний" with 9 test cases passed after 0.543 seconds.
+✔ Test "одинокий оригинал крупнее парного" passed after 0.543 seconds.
+✔ Test "в шрифте санскрита есть нужные знаки" passed after 0.543 seconds.
+✔ Test "шрифт создаётся из своего семейства" with 8 test cases passed after 0.543 seconds.
+✔ Test "масштаб уменьшает оба кегля" passed after 0.543 seconds.
+✔ Test "сразу после паузы она не показывается снова" passed after 0.540 seconds.
+✔ Test "адрес возврата доживает до кнопки" passed after 0.540 seconds.
+✔ Test "показ не задерживает действие" passed after 0.540 seconds.
+✔ Test "в окне тишины пауза не показывается, а отскакивает в соцсеть" passed after 0.540 seconds.
+✔ Test "без адреса пауза всё равно показывается" passed after 0.540 seconds.
+✔ Test "по истечении окна пауза показывается снова" passed after 0.540 seconds.
+✔ Test "уход мимо кнопки засчитывается" passed after 0.540 seconds.
+✔ Suite "Фон под пропорции экрана" passed after 0.548 seconds.
+✔ Suite "Экран «Сегодня»" passed after 0.548 seconds.
+✔ Suite "Шрифты" passed after 0.548 seconds.
+✔ Test "окно тишины видно из другого процесса" passed after 0.551 seconds.
+✔ Suite "Пауза перед лентой" passed after 0.558 seconds.
+✔ Test "оформление виджетов идёт через отдельный шаг переключения" passed after 0.420 seconds.
+✔ Test "пройденный тур не запускается снова" passed after 0.421 seconds.
+✔ Test "каждый шаг знает свою вкладку" passed after 0.421 seconds.
+✔ Test "тур начинается со свайпа" passed after 0.420 seconds.
+✔ Test "чужое действие шаг не закрывает" passed after 0.420 seconds.
+✔ Test "шаги идут по порядку и заканчиваются" passed after 0.420 seconds.
+✔ Test "повторный запуск не сбрасывает идущий тур" passed after 0.420 seconds.
+✔ Suite "Обучающий тур" passed after 0.564 seconds.
+✔ Test run with 166 tests in 20 suites passed after 0.565 seconds.
