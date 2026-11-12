@@ -31,17 +31,17 @@ ROOT = os.path.dirname(os.path.dirname(HERE))
 MEDIA = os.path.join(ROOT, "DeepamCore", "Sources", "DeepamUI", "Resources", "Media.xcassets")
 APPICONS = os.path.join(ROOT, "App", "Deepam", "Assets.xcassets")
 
-LIGHT_TEXT = 0xEEECE6
-DARK_TEXT = 0x201C1A
+LIGHT_TEXT = 0xF4E8DC
+DARK_TEXT = 0x2B1A14
 
 # ключ, точка фокуса на высоком кадре, акцент (цвет ссылок и кнопок поверх картинки)
 SCENES = [
-    dict(key="himalaya", focus=(0.5, 0.80), accent=0xF6B26A),
-    dict(key="ganga", focus=(0.5, 0.34), accent=0xF4A340),
-    dict(key="temple", focus=(0.5, 0.74), accent=0xFFB257),
-    dict(key="diya", focus=(0.5, 0.22), accent=0xFFC95C),
-    dict(key="lotus", focus=(0.5, 0.80), accent=0xF48FB1),
-    dict(key="rangoli", focus=(0.5, 0.50), accent=0x9C2F63),
+    dict(key="himalaya", focus=(0.5, 0.80), accent=0xF2A14E),
+    dict(key="ganga", focus=(0.5, 0.34), accent=0xF0913A),
+    dict(key="temple", focus=(0.5, 0.74), accent=0xFFA64A),
+    dict(key="diya", focus=(0.5, 0.22), accent=0xFFB347),
+    dict(key="lotus", focus=(0.5, 0.80), accent=0xFF8A5C),
+    dict(key="rangoli", focus=(0.5, 0.50), accent=0x9B1B2A),
     dict(key="mandala", focus=(0.5, 0.40), accent=0xF2C45E),
 ]
 ICON_KEYS = ["default", "night", "lotus", "om", "dawn", "temple", "mandala", "light"]

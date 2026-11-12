@@ -218,7 +218,7 @@ struct AppearancePreview: View {
         .frame(maxWidth: .infinity)
         .background(
             RoundedRectangle(cornerRadius: 22, style: .continuous)
-                .fill(LinearGradient(colors: [Color(hex: 0x3F2F4B), Color(hex: 0x1C1521)],
+                .fill(LinearGradient(colors: [Color(hex: 0x4A1A24), Color(hex: 0x1B0B0F)],
                                      startPoint: .top, endPoint: .bottom))
         )
     }

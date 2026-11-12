@@ -9,15 +9,15 @@ import numpy as np
 from hart import Canvas, circle, ellipse, flame, lingrad, mix, petal, radgrad, ramp, rgb
 
 # ── палитра ─────────────────────────────────────────────────────────────────
-PLUM_0 = 0x0E0914
-PLUM_1 = 0x1A1424
-PLUM_2 = 0x2E2140
-PLUM_3 = 0x4A2B58
-MAUVE = 0x7A3F6D
-ROSE = 0xB9566B
-EMBER = 0xE8803A
-SAFFRON = 0xF4A340
-GOLD = 0xFFC95C
+GARNET_0 = 0x14060A      # почти чёрный гранат
+GARNET_1 = 0x2B0D10
+GARNET_2 = 0x4C151A
+GARNET_3 = 0x691A22
+CRIMSON = 0x912831
+CORAL = 0xCD4542
+EMBER = 0xE8803A         # тлеющий оранжевый
+AMBER = 0xF0913A
+GOLD = 0xE6B866          # матовое золото
 CREAM = 0xFFF1D0
 
 
@@ -37,8 +37,8 @@ def diya(cv: Canvas, cx, rim_y, size, lit=True, halo=1.0, flame_scale=1.0, sway=
 
     if lit and halo > 0:
         cv.gauss_glow(cx, base_y - fh * 0.40, fh * 0.62, 0xFF7A22, 0.36 * halo)
-        cv.gauss_glow(cx, base_y - fh * 0.40, fh * 1.5, 0xD8501E, 0.13 * halo)
-        cv.gauss_glow(cx, rim_y + 0.06 * s, s * 0.62, 0xFFA040, 0.12 * halo, ry=0.5)
+        cv.gauss_glow(cx, base_y - fh * 0.40, fh * 1.4, 0xB82A1E, 0.15 * halo)
+        cv.gauss_glow(cx, rim_y + 0.06 * s, s * 0.62, 0xE8702A, 0.09 * halo, ry=0.5)
 
     # тень под чашей
     cv.poly(ellipse(cx, rim_y + 0.40 * s, 0.46 * s, 0.045 * s), 0x000000, 0.35, blur=u * 14 * size / 500)

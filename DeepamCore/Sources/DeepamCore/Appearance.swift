@@ -84,14 +84,14 @@ public enum VerseStyle: String, Sendable, Hashable, Codable, CaseIterable, Ident
     /// первого, у плоских совпадает.
     public var palette: (background: UInt32, second: UInt32, text: UInt32, accent: UInt32) {
         switch self {
-        case .saffron: (0xF09A35, 0xC4651A, 0xFFFFFF, 0xFFE8C6)
-        case .night: (0x1A1424, 0x2E2140, 0xF0E9E4, 0xF4A340)
-        case .parchment: (0xEDE3CE, 0xE3D6BC, 0x1F292B, 0x9C6B18)
-        case .amber: (0x4A2F1A, 0x2A1B10, 0xF2E4CC, 0xF2A93B)
-        case .ink: (0x110E1E, 0x090711, 0xDCD6EC, 0x9088C8)
-        case .dawn: (0xF9E9E1, 0xF0CFC0, 0x2A1A22, 0xD0583A)
-        case .opal: (0xF6D3E0, 0xE9A9C2, 0x2A1424, 0x9C2F63)
-        case .coal: (0x2A2229, 0x171216, 0xDCCFD3, 0xA8909A)
+        case .saffron: (0xEE8A32, 0xB8481A, 0xFFF4E8, 0xFFE0BC)
+        case .night: (0x1C0A0E, 0x3C141C, 0xF4E8DC, 0xF0913A)
+        case .parchment: (0xEDE3CE, 0xE3D6BC, 0x2B1A14, 0xA8431E)
+        case .amber: (0x5A2616, 0x341309, 0xF5E6D0, 0xF39A3C)
+        case .ink: (0x160709, 0x0B0405, 0xE8D8CE, 0xC98B5C)
+        case .dawn: (0xFAEAE0, 0xF2CDB8, 0x3A1A18, 0xC8432A)
+        case .opal: (0xF8DDD2, 0xEDB4A2, 0x3A1418, 0xA3262F)
+        case .coal: (0x2C2123, 0x181011, 0xE0D0C8, 0xB58C7A)
         }
     }
 }

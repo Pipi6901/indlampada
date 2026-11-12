@@ -18,7 +18,7 @@ sys.path.insert(0, HERE)
 from hart import Canvas, circle, ellipse, fbm, flame, lingrad, mix, radgrad, ramp, rgb  # noqa: E402
 import motifs  # noqa: E402
 import motifs2  # noqa: E402
-from motifs import CREAM, EMBER, GOLD, MAUVE, PLUM_0, PLUM_1, PLUM_2, PLUM_3, ROSE, SAFFRON  # noqa: E402
+from motifs import AMBER, CORAL, CREAM, CRIMSON, EMBER, GARNET_0, GARNET_1, GARNET_2, GARNET_3, GOLD  # noqa: E402
 
 TALL = 2868 / 1320.0
 
@@ -46,20 +46,20 @@ def _ridge(cv, base, amp, seed, peaks=(), rough=0.55, base_freq=4, octaves=6, sh
 def himalaya(w=1320):
     cv = _canvas(w)
     h = cv.h
-    cv.vgrad([(0.00, 0x110B28), (0.26, 0x241848), (0.46, 0x45285F), (0.60, 0x84396A), (0.69, 0xC8605A),
-              (0.76, 0xEE9A5C), (0.82, 0xF8BE74), (1.0, 0xF8BE74)])
+    cv.vgrad([(0.00, 0x14050A), (0.26, 0x2C0A12), (0.46, 0x4E1019), (0.60, 0x7E1722), (0.69, 0xB02A1F),
+              (0.76, 0xDC5E22), (0.82, 0xF29A38), (1.0, 0xF29A38)])
     cv.stars(260, 0.40, seed=3, sizes=(0.7, 1.6), alpha=(0.25, 0.9), big=5)
     # рассвет за хребтами
-    cv.gauss_glow(w * 0.56, h * 0.775, w * 0.55, 0xFFB466, 0.60, ry=0.45)
-    cv.gauss_glow(w * 0.56, h * 0.775, w * 0.20, 0xFFE2A8, 0.55, ry=0.60)
+    cv.gauss_glow(w * 0.56, h * 0.775, w * 0.55, 0xFFA244, 0.60, ry=0.45)
+    cv.gauss_glow(w * 0.56, h * 0.775, w * 0.20, 0xFFCF7E, 0.50, ry=0.60)
     # хребты от дальнего к ближнему
     layers = [
         # база, размах, зерно, вершины, цвет сверху, цвет снизу
-        (0.690, 0.070, 11, [(0.62, 0.118, 0.20), (0.18, 0.060, 0.13), (0.92, 0.050, 0.10)], 0xB06A86, 0xE08E78),
-        (0.740, 0.060, 12, [], 0x8C5588, 0xBD6F80),
-        (0.795, 0.052, 13, [], 0x5A3566, 0x8A4A72),
-        (0.860, 0.046, 14, [], 0x33204A, 0x4E2D5C),
-        (0.940, 0.022, 15, [], 0x170E26, 0x1E1230),
+        (0.690, 0.070, 11, [(0.62, 0.118, 0.20), (0.18, 0.060, 0.13), (0.92, 0.050, 0.10)], 0x9C2A1E, 0xD8662A),
+        (0.740, 0.060, 12, [], 0x7A1D22, 0xA23224),
+        (0.795, 0.052, 13, [], 0x4F1219, 0x6E1D22),
+        (0.860, 0.046, 14, [], 0x32090F, 0x430D13),
+        (0.940, 0.022, 15, [], 0x1A0508, 0x22070B),
     ]
     for base, amp, seed, peaks, c_top, c_bot in layers:
         ys = _ridge(cv, base, amp, seed, peaks, sharp=0.85 if base < 0.8 else 0.5)
@@ -73,10 +73,10 @@ def himalaya(w=1320):
         if base < 0.70:
             yy = np.arange(h, dtype=np.float32)[:, None]
             band = np.clip(1 - (yy - ys[None, :]) / (0.011 * h), 0, 1) * (yy >= ys[None, :] - 1)
-            cv.add(0xFFD0B8, band ** 1.6 * 0.20)
+            cv.add(0xFFB468, band ** 1.6 * 0.30)
         # дымка между хребтами
         yy_haze = ys.min() / h
-        cv.glow(w * 0.55, (yy_haze + 0.10) * h, w * 1.1, 0xF3A66A, 0.16, ry=0.2, mode="over") if base < 0.9 else None
+        cv.glow(w * 0.55, (yy_haze + 0.10) * h, w * 1.1, 0xE9803A, 0.14, ry=0.2, mode="over") if base < 0.9 else None
     return cv.to_image(5)
 
 
@@ -86,8 +86,8 @@ def ganga(w=1320):
     cv = _canvas(w)
     h = cv.h
     hy = 0.335          # линия горизонта
-    cv.vgrad([(0.0, 0x090612), (0.16, 0x140D28), (0.28, 0x2A1A44), (hy - 0.005, 0x4A2A58), (hy, 0x4A2A58),
-              (hy + 0.01, 0x30203F), (0.55, 0x1A1128), (0.80, 0x0E0A1A), (1.0, 0x07050F)])
+    cv.vgrad([(0.0, 0x150305), (0.16, 0x2E070B), (0.28, 0x520C13), (hy - 0.005, 0x691921), (hy, 0x691921),
+              (hy + 0.01, 0x4B1419), (0.55, 0x30090D), (0.80, 0x1F0507), (1.0, 0x110304)])
     cv.stars(300, 0.27, seed=4, sizes=(0.6, 1.5), alpha=(0.2, 0.85), big=4)
     # млечный путь: размытая диагональная полоса
     yy, xx = np.mgrid[0:int(hy * h), 0:w].astype(np.float32)
@@ -95,18 +95,18 @@ def ganga(w=1320):
     band = np.exp(-(d / 0.07) ** 2) * (0.35 + 0.65 * np.random.default_rng(5).random((1, 1)))
     noise = gaussian_filter(np.random.default_rng(6).random((int(hy * h), w)).astype(np.float32), 5 * cv.u)
     band *= 0.6 + 1.6 * (noise - noise.mean()) / (noise.std() + 1e-6) * 0.2
-    cv.add(0xC9B4F0, np.clip(band, 0, 1) * 0.10)
+    cv.add(0xF2BDB2, np.clip(band, 0, 1) * 0.10)
     # свет за дальним берегом
     cv.gauss_glow(w * 0.5, hy * h, w * 0.5, 0xE07A5A, 0.28, ry=0.22)
 
     # дальний берег: гхаты и башенки
     ys = np.full(w, hy * h, np.float32) - 4 * cv.u * (fbm(w, 21, base=12, octaves=3) - 0.4)
-    cv.ridge(ys, 0x0D0815)
+    cv.ridge(ys, 0x190406)
     spire_xs = [0.10, 0.27, 0.41, 0.63, 0.78, 0.92]
     for k, fx in enumerate(spire_xs):
         sw = (0.034 + 0.01 * (k % 3)) * 1320
         sh = (0.040 + 0.012 * (k % 2)) * 2868 * 0.9
-        motifs2.gopuram(cv, fx * 1320, hy * 2868 + 6, sw, sh * 0.55, color=0x0D0815, tiers=5, windows=0xFFB864,
+        motifs2.gopuram(cv, fx * 1320, hy * 2868 + 6, sw, sh * 0.55, color=0x190406, tiers=5, windows=0xFFB864,
                         win_alpha=0.6, finials=3, portal=False)
     # огни на гхатах и их отражения
     rnd = random.Random(7)
@@ -129,7 +129,7 @@ def ganga(w=1320):
         wgt = np.linspace(0, 1, b - a, dtype=np.float32)[:, None]
         edge = np.minimum(np.minimum(wgt, 1 - wgt) * 4, 1) if y1 < 1 else np.minimum(wgt * 4, 1)
         streak[a:b] = np.maximum(streak[a:b], np.clip(s_ - 0.7, 0, 2) * edge)
-    cv.add(0x9A6FC0, streak * 0.16, 0, int(hy * h))
+    cv.add(0xD45B5F, streak * 0.16, 0, int(hy * h))
     # дорожка света под далёким заревом
     cv.gauss_glow(w * 0.5, hy * h + h * 0.10, w * 0.10, 0xFF9650, 0.30, ry=5.0)
 
@@ -153,7 +153,7 @@ def ganga(w=1320):
         cv.gauss_glow(x, y + fh * 0.4, fw * 3.2, 0xFF8A3A, 0.22)
         cv.gauss_glow(x, y + fh * 2.6, fw * 0.8, 0xFFA24A, 0.34, ry=5.2)
         # лодочка-листок и пламя
-        cv.poly([ellipse(x, y + fh * 0.18, fw * 1.9, fw * 0.62)], 0x15091A, 0.96, ss=4)
+        cv.poly([ellipse(x, y + fh * 0.18, fw * 1.9, fw * 0.62)], 0x1E0507, 0.96, ss=4)
         cv.poly([ellipse(x, y + fh * 0.10, fw * 1.5, fw * 0.40)], 0xC4602A, 0.9, ss=4)
         motifs._flame_px(cv, x, y + fh * 0.05, fh, fw, 0.04)
         # круги от лодочки
@@ -171,13 +171,13 @@ def ganga(w=1320):
 def temple(w=1320):
     cv = _canvas(w)
     h = cv.h
-    cv.vgrad([(0.00, 0x130C2A), (0.26, 0x2A1A4A), (0.46, 0x58296A), (0.60, 0x9C416B), (0.70, 0xD2625A),
-              (0.79, 0xEE8F55), (0.86, 0xF7AC63), (1.0, 0xF7AC63)])
+    cv.vgrad([(0.00, 0x14050A), (0.26, 0x2E0A12), (0.46, 0x5A101A), (0.60, 0x8E1B22), (0.70, 0xC03A22),
+              (0.79, 0xDA5C1E), (0.86, 0xE67A26), (1.0, 0xE67A26)])
     cv.stars(240, 0.36, seed=5, sizes=(0.6, 1.5), alpha=(0.2, 0.85), big=4)
     # солнце за башней
-    cv.gauss_glow(w * 0.5, h * 0.735, w * 0.60, 0xFF9E58, 0.34, ry=0.5)
-    cv.poly([circle(w * 0.5, h * 0.725, w * 0.13, 90)], 0xFFD890, 0.95, ss=3, blur=cv.px(2))
-    cv.gauss_glow(w * 0.5, h * 0.725, w * 0.24, 0xFFC070, 0.30)
+    cv.gauss_glow(w * 0.5, h * 0.735, w * 0.60, 0xFF8A3A, 0.38, ry=0.5)
+    cv.poly([circle(w * 0.5, h * 0.725, w * 0.13, 90)], 0xFFB65A, 0.95, ss=3, blur=cv.px(2))
+    cv.gauss_glow(w * 0.5, h * 0.725, w * 0.24, 0xFFAA4A, 0.30)
     # лучи
     ray = np.zeros((h, w), np.float32)
     yy, xx = np.mgrid[0:h, 0:w].astype(np.float32)
@@ -185,9 +185,9 @@ def temple(w=1320):
     rays = (0.5 + 0.5 * np.cos(ang * 22)) ** 6
     dist = np.sqrt((xx - w * 0.5) ** 2 + (yy - h * 0.725) ** 2) / w
     ray = rays * np.exp(-dist * 2.4) * (yy < h * 0.80)
-    cv.add(0xFFB060, ray * 0.075)
+    cv.add(0xFF9A3C, ray * 0.075)
     # башни: боковые и главная
-    col = 0x10091A
+    col = 0x1E0507
     motifs2.gopuram(cv, 0.12 * 1320, 0.992 * 2868, 300, 0.22 * 2868, color=col, tiers=6, windows=0xFFB24A, win_alpha=0.75,
                     finials=3)
     motifs2.gopuram(cv, 0.88 * 1320, 0.992 * 2868, 300, 0.22 * 2868, color=col, tiers=6, windows=0xFFB24A, win_alpha=0.75,
@@ -215,10 +215,10 @@ def temple(w=1320):
 def diya_scene(w=1320):
     cv = _canvas(w)
     h = cv.h
-    cv.rgrad(w * 0.5, h * 0.20, 1.25 * w, [(0.0, 0x4B2539), (0.40, 0x28162F), (1.0, 0x0B0711)], ry=1.55)
+    cv.rgrad(w * 0.5, h * 0.20, 1.25 * w, [(0.0, 0x59171C), (0.40, 0x380D11), (1.0, 0x140405)], ry=1.55)
     # боке: мягкие диски света, больше внизу
     rnd = random.Random(31)
-    palette = [0xFFB45A, 0xFF8A4A, 0xFFD98A, 0xE8628E]
+    palette = [0xFFB45A, 0xFF8A4A, 0xFFD98A, 0xE66664]
     for i in range(70):
         r = cv.px(rnd.uniform(18, 92))
         x = rnd.random() * w
@@ -239,7 +239,7 @@ def diya_scene(w=1320):
         sp.append((w * (0.5 + (rnd.random() - 0.5) * 0.8), h * (0.03 + rnd.random() * 0.22), rnd.uniform(5, 13)))
     cv.sparkles(sp, alpha=0.8)
     # спокойный низ: затемнение у нижнего края
-    cv.glow(w * 0.5, h * 1.04, w * 1.0, 0x07040C, 0.5, ry=0.5, mode="over")
+    cv.glow(w * 0.5, h * 1.04, w * 1.0, 0x0E0203, 0.5, ry=0.5, mode="over")
     return cv.to_image(8)
 
 
@@ -248,8 +248,8 @@ def diya_scene(w=1320):
 def lotus_scene(w=1320):
     cv = _canvas(w)
     h = cv.h
-    cv.vgrad([(0.0, 0x0C0818), (0.35, 0x1C1136), (0.62, 0x261840), (0.80, 0x1A1030), (1.0, 0x0A0612)])
-    cv.gauss_glow(w * 0.5, h * 0.10, w * 0.38, 0xC87AC8, 0.20, ry=0.8)
+    cv.vgrad([(0.0, 0x1C0407), (0.35, 0x3E090F), (0.62, 0x4D0B12), (0.80, 0x38080D), (1.0, 0x150305)])
+    cv.gauss_glow(w * 0.5, h * 0.10, w * 0.38, 0xD0603A, 0.16, ry=0.8)
     cv.stars(120, 0.30, seed=6, sizes=(0.6, 1.4), alpha=(0.2, 0.8), big=2)
     cx, cy = w * 0.5, h * 0.885
     # круги на воде
@@ -259,7 +259,7 @@ def lotus_scene(w=1320):
         a = 0.17 * (1 - k / 15)
         cv.draw(lambda d, T, ss, rx=rx, ry=ry: d.ellipse([*T(cx - rx, cy - ry), *T(cx + rx, cy + ry)], outline=255,
                                                         width=max(1, int(cv.px(2.0) * ss))),
-                0xE080C0, (cx - rx - 4, cy - ry - 4, cx + rx + 4, cy + ry + 4), a, mode="add")
+                0xE8905A, (cx - rx - 4, cy - ry - 4, cx + rx + 4, cy + ry + 4), a, mode="add")
     # листья кувшинки
     pads = [(0.14, 0.925, 0.34, 0.058, 0.2), (0.86, 0.905, 0.30, 0.052, -0.3), (0.30, 0.968, 0.26, 0.045, 0.1),
             (0.74, 0.972, 0.28, 0.048, -0.1), (0.05, 0.84, 0.20, 0.036, 0.0), (0.97, 0.835, 0.20, 0.036, 0.0)]
@@ -270,19 +270,19 @@ def lotus_scene(w=1320):
         for a in np.linspace(0.32, 2 * math.pi - 0.32, 70):
             pad.append((px_ + rx * math.cos(a), py_ + ry * math.sin(a)))
         pad.append((px_, py_))
-        fill = lingrad((px_, py_ - ry), (px_, py_ + ry), [(0, 0x15463F), (1, 0x0A2229)])
+        fill = lingrad((px_, py_ - ry), (px_, py_ + ry), [(0, 0x3B2D20), (1, 0x221911)])
         cv.poly([pad], fill, 0.96, ss=3, blur=0.4)
         cv.draw(lambda d, T, ss, px_=px_, py_=py_, rx=rx, ry=ry: d.arc([*T(px_ - rx * 0.97, py_ - ry * 0.97),
                                                                        *T(px_ + rx * 0.97, py_ + ry * 0.97)],
                                                                       start=20, end=200, fill=255,
                                                                       width=max(1, int(cv.px(2.4) * ss))),
-                0x4FC2A8, (px_ - rx - 4, py_ - ry - 4, px_ + rx + 4, py_ + ry + 4), 0.20, mode="add")
+                0xA88669, (px_ - rx - 4, py_ - ry - 4, px_ + rx + 4, py_ + ry + 4), 0.20, mode="add")
     # цветок
     motifs2.lotus(cv, 660, 0.905 * 2868, 1000, halo=1.0)
     # светлячки
     rnd = random.Random(41)
     sp = [(w * rnd.random(), h * (0.38 + 0.50 * rnd.random()), rnd.uniform(4, 9)) for _ in range(22)]
-    cv.sparkles(sp, color=0xFFB8E0, alpha=0.55)
+    cv.sparkles(sp, color=0xF4CBC3, alpha=0.55)
     return cv.to_image(9)
 
 
@@ -291,7 +291,7 @@ def lotus_scene(w=1320):
 def rangoli(w=1320):
     cv = _canvas(w)
     h = cv.h
-    cv.vgrad([(0.0, 0xFFF6E8), (0.5, 0xFDEBD2), (1.0, 0xF8DDB8)])
+    cv.vgrad([(0.0, 0xFFF4E2), (0.5, 0xFCE6C8), (1.0, 0xF5D3A6)])
     cv.glow(w * 0.5, h * 0.45, w * 0.9, 0xFFFFFF, 0.35, ry=1.3, mode="over")
     g = 165.0                                    # шаг решётки, дизайнерские пиксели
     S = cv.px(g)
@@ -320,9 +320,9 @@ def rangoli(w=1320):
 
     m, x0, y0 = cv.draw_mask(lattice, (0, 0, w, h), ss=2, blur=0.5)
     wt = weight[y0:y0 + m.shape[0], None]
-    cv.over(0xB8483C, m * wt * 0.42, x0, y0)
+    cv.over(0x9B1B2A, m * wt * 0.48, x0, y0)
     # крупная ранголи внизу и поменьше вверху
-    for cx_, cy_, r_, a_, col in ((660, 0.865 * 2868, 560, 0.55, 0xB03A74), (660, 0.115 * 2868, 400, 0.50, 0x2F8F9D)):
+    for cx_, cy_, r_, a_, col in ((660, 0.865 * 2868, 560, 0.62, 0x9B1B2A), (660, 0.115 * 2868, 400, 0.58, 0xB5541A)):
         cv2 = cv.copy()
         cv2.a[:] = 0
         motifs2.mandala(cv2, cx_, cy_, r_, color=col, alpha=1.0, lines=3.0, mode="add", detail=1.0)
@@ -337,7 +337,7 @@ def rangoli(w=1320):
 def mandala_scene(w=1320):
     cv = _canvas(w)
     h = cv.h
-    cv.rgrad(w * 0.5, h * 0.40, 1.2 * w, [(0.0, 0x4B1D45), (0.50, 0x2A1232), (1.0, 0x0F0818)], ry=1.7)
+    cv.rgrad(w * 0.5, h * 0.40, 1.2 * w, [(0.0, 0x5A0E14), (0.50, 0x3B090E), (1.0, 0x1C0407)], ry=1.7)
     cv.gauss_glow(w * 0.5, h * 0.40, w * 0.30, 0xF5A04A, 0.16, ry=1.0)
     yy = (np.arange(h, dtype=np.float32) + 0.5) / h
     weight = 1 - 0.60 * np.exp(-((yy - 0.47) / 0.17) ** 2)

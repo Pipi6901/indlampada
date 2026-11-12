@@ -38,16 +38,16 @@ import SwiftUI
 /// исходных не содержит кириллицы, и на русском система молча подставила бы
 /// своё. Замены подобраны по рисунку и уже лежат в пакете.
 enum OB {
-    static let ink = Color(hex: 0x1C1521)
-    static let brass = Color(hex: 0xDFDCE2)
-    static let text = Color(hex: 0xE9E6EC)
-    static let textMuted = Color(hex: 0xCDC0D7)
-    static let textFaint = Color(hex: 0x9D91A6)
-    static let line = Color(hex: 0x44354E)
-    static let raised = Color(hex: 0x33273C)
-    static let violet = Color(hex: 0xECA651)
-    static let violetDeep = Color(hex: 0x633B7F)
-    static let onBrass = Color(hex: 0x221A27)
+    static let ink = Color(hex: 0x1B0B0F)
+    static let brass = Color(hex: 0xEBA654)
+    static let text = Color(hex: 0xF4E8DC)
+    static let textMuted = Color(hex: 0xD3BBAC)
+    static let textFaint = Color(hex: 0xA08A7E)
+    static let line = Color(hex: 0x5A2A31)
+    static let raised = Color(hex: 0x3A1A21)
+    static let violet = Color(hex: 0xF08A35)
+    static let violetDeep = Color(hex: 0x8E1F2A)
+    static let onBrass = Color(hex: 0x2A0F10)
 
     static func display(_ size: CGFloat, weight: CGFloat = 400) -> Font {
         Fonts.font(.literata, size: size, weight: weight)
@@ -105,8 +105,8 @@ struct OBBackground: View {
 /// Тёмный набор экранов онбординга и «Что нового»: один и тот же градиент,
 /// разное пятно.
 let obDeep: [Gradient.Stop] = [
-    .init(color: Color(hex: 0x32263A), location: 0),
-    .init(color: Color(hex: 0x251B2C), location: 0.6),
+    .init(color: Color(hex: 0x3E141C), location: 0),
+    .init(color: Color(hex: 0x240D12), location: 0.6),
     .init(color: OB.ink, location: 1),
 ]
 
@@ -120,7 +120,7 @@ struct OBButton: ButtonStyle {
             .frame(maxWidth: .infinity)
             .frame(height: 58)
             .background(Capsule().fill(OB.brass))
-            .shadow(color: Color(hex: 0xCDC0D7).opacity(0.18), radius: 14, y: 8)
+            .shadow(color: Color(hex: 0xD3BBAC).opacity(0.18), radius: 14, y: 8)
             .contentShape(Capsule())
             .opacity(configuration.isPressed ? 0.85 : 1)
     }
@@ -407,8 +407,8 @@ private struct VersePage: View {
     var body: some View {
         ZStack(alignment: .top) {
             OBBackground(stops: [
-                .init(color: Color(hex: 0x35283E), location: 0),
-                .init(color: Color(hex: 0x261C2D), location: 0.5),
+                .init(color: Color(hex: 0x421720), location: 0),
+                .init(color: Color(hex: 0x28101A), location: 0.5),
                 .init(color: OB.ink, location: 1),
             ])
 
@@ -525,7 +525,7 @@ struct OBPoster<Content: View>: View {
             .overlay(
                 LinearGradient(stops: [
                     .init(color: OB.ink.opacity(0), location: 0),
-                    .init(color: Color(hex: 0x201825).opacity(0.86), location: 0.46),
+                    .init(color: Color(hex: 0x1C0A0E).opacity(0.86), location: 0.46),
                     .init(color: OB.ink, location: 0.84),
                 ], startPoint: .top, endPoint: .bottom)
             )
@@ -608,7 +608,7 @@ private struct GoalPage: View {
 
                 Image(systemName: isOn ? "checkmark.circle" : "circle")
                     .font(.system(size: 21))
-                    .foregroundStyle(isOn ? OB.text : Color(hex: 0x574A60))
+                    .foregroundStyle(isOn ? OB.text : Color(hex: 0x7C625A))
             }
             .padding(.horizontal, 12)
             .padding(.vertical, 11)
@@ -891,7 +891,7 @@ private struct OBFeedPage: View {
                 Spacer()
                 Image(systemName: isOn ? "checkmark.circle" : "circle")
                     .font(.system(size: 20))
-                    .foregroundStyle(isOn ? OB.text : Color(hex: 0x574A60))
+                    .foregroundStyle(isOn ? OB.text : Color(hex: 0x7C625A))
             }
             .padding(.horizontal, 18)
             .padding(.vertical, 14)
@@ -1344,11 +1344,11 @@ struct OBLockPreview: View {
                 .fill(LinearGradient(stops: [
                     .init(color: OB.violetDeep, location: 0),
                     .init(color: Color(hex: 0xE68B1C), location: 0.5),
-                    .init(color: Color(hex: 0x251B2C), location: 1),
+                    .init(color: Color(hex: 0x28101A), location: 1),
                 ], startPoint: .top, endPoint: .bottom))
         )
         .overlay(RoundedRectangle(cornerRadius: 34, style: .continuous)
-            .strokeBorder(Color(hex: 0x574167), lineWidth: 1))
+            .strokeBorder(Color(hex: 0x7A3A40), lineWidth: 1))
         .shadow(color: .black.opacity(0.6), radius: 25, y: 22)
     }
 }
@@ -1364,8 +1364,8 @@ private struct DonePage: View {
     var body: some View {
         ZStack(alignment: .top) {
             OBBackground(stops: [
-                .init(color: Color(hex: 0x35283E), location: 0),
-                .init(color: Color(hex: 0x261C2D), location: 0.5),
+                .init(color: Color(hex: 0x421720), location: 0),
+                .init(color: Color(hex: 0x28101A), location: 0.5),
                 .init(color: OB.ink, location: 1),
             ])
 
@@ -1417,7 +1417,7 @@ private struct WhyPage: View {
     var body: some View {
         ZStack {
             OBBackground(stops: [
-                .init(color: Color(hex: 0x261C2D), location: 0),
+                .init(color: Color(hex: 0x28101A), location: 0),
                 .init(color: OB.ink, location: 1),
             ], glow: .init(color: OB.violet.opacity(0.2), size: 470, x: -40, y: 190))
 

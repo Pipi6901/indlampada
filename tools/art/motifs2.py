@@ -6,14 +6,14 @@ import math
 import numpy as np
 
 from hart import Canvas, circle, ellipse, lingrad, mix, petal, radgrad, ramp, rgb
-from motifs import PLUM_0, PLUM_1, PLUM_2, PLUM_3, MAUVE, ROSE, EMBER, SAFFRON, GOLD, CREAM
+from motifs import AMBER, CORAL, CREAM, CRIMSON, EMBER, GARNET_0, GARNET_1, GARNET_2, GARNET_3, GOLD
 
 # ── лотос ───────────────────────────────────────────────────────────────────
 
 LOTUS_PINK = dict(
-    back=(0x5A1850, 0xB5367D),
-    mid=(0x96306F, 0xEC74A9),
-    front=(0xD35A95, 0xFFC6DD),
+    back=(0x4E0A14, 0xA01824),
+    mid=(0x8E1624, 0xE0503A),
+    front=(0xD0382C, 0xFFC9A0),
 )
 LOTUS_GOLD = dict(
     back=(0x8A4A10, 0xE9A63A),
@@ -22,7 +22,7 @@ LOTUS_GOLD = dict(
 )
 
 
-def lotus(cv: Canvas, cx, base_y, size, palette=None, halo=1.0, halo_color=0xFF5E9A, water=True):
+def lotus(cv: Canvas, cx, base_y, size, palette=None, halo=1.0, halo_color=0xFF7A3A, water=True):
     """Цветок лотоса: три ряда узких лепестков веером из одной точки, свечение и кольца на воде.
     `size` — ширина цветка, `base_y` — точка, из которой растут лепестки (дизайнерские пиксели)."""
     pal = palette or LOTUS_PINK
@@ -155,7 +155,7 @@ def _arch(cx, y_bot, hw, h, n=10):
     return pts
 
 
-def gopuram(cv: Canvas, cx, base_y, width, height, color=0x0E0914, tiers=8, windows=0xFFB24A, win_alpha=0.85,
+def gopuram(cv: Canvas, cx, base_y, width, height, color=0x180507, tiers=8, windows=0xFFB24A, win_alpha=0.85,
             finials=5, portal=True):
     """Силуэт храмовой башни (гопурам): ярусы с карнизами и нишами, вогнутый к верху профиль, бочкообразная крыша
     и ряд калаш. Размеры — в дизайнерских пикселях; возвращает высоту самой верхней точки в пикселях кадра."""

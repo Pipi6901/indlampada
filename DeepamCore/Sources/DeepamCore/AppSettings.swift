@@ -541,7 +541,7 @@ public enum AppIcon: String, Sendable, Hashable, Codable, CaseIterable, Identifi
 
     /// Градиент подложки плитки, пока картинка не прорисовалась.
     public var swatch: (top: UInt32, bottom: UInt32, lamp: UInt32?) {
-        (0x311A42, 0x180D1F, nil)
+        (0x4A141C, 0x1E080C, nil)
     }
 
     /// Бесплатны основная и «Ночь»: в онбординге человек выбирает иконку, и выбор,

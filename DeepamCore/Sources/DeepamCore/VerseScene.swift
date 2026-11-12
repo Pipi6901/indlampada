@@ -49,9 +49,9 @@ public enum VerseScene: String, Sendable, Hashable, Codable, CaseIterable, Ident
     /// картинка гаснет целиком и смысл её теряется.
     public var scrim: Double {
         switch self {
-        case .himalaya: 0.24
+        case .himalaya: 0.0
         case .ganga: 0.0
-        case .temple: 0.38
+        case .temple: 0.29
         case .diya: 0.0
         case .lotus: 0.0
         case .rangoli: 0.0
@@ -83,13 +83,13 @@ public enum VerseScene: String, Sendable, Hashable, Codable, CaseIterable, Ident
     /// (сверху лежит картинка), но задаёт светлоту для плашек и кнопок.
     public var palette: (background: UInt32, second: UInt32, text: UInt32, accent: UInt32) {
         switch self {
-        case .himalaya: (0x653A64, 0x4E2E55, 0xEEECE6, 0xF6B26A)
-        case .ganga: (0x311D29, 0x321F29, 0xEEECE6, 0xF4A340)
-        case .temple: (0x83436C, 0x6E4555, 0xEEECE6, 0xFFB257)
-        case .diya: (0x3C1F32, 0x462630, 0xEEECE6, 0xFFC95C)
-        case .lotus: (0x331B46, 0x47284F, 0xEEECE6, 0xF48FB1)
-        case .rangoli: (0xFCECD8, 0xF9E7D1, 0x201C1A, 0x9C2F63)
-        case .mandala: (0x512742, 0x411F3B, 0xEEECE6, 0xF2C45E)
+        case .himalaya: (0x671C1D, 0x4E1516, 0xF4E8DC, 0xF2A14E)
+        case .ganga: (0x411713, 0x441913, 0xF4E8DC, 0xF0913A)
+        case .temple: (0x832722, 0x702E1E, 0xF4E8DC, 0xFFA64A)
+        case .diya: (0x491315, 0x521C17, 0xF4E8DC, 0xFFB347)
+        case .lotus: (0x561214, 0x601F1A, 0xF4E8DC, 0xFF8A5C)
+        case .rangoli: (0xFBE8CF, 0xF8E0C5, 0x2B1A14, 0x9B1B2A)
+        case .mandala: (0x611B18, 0x511414, 0xF4E8DC, 0xF2C45E)
         }
     }
 }

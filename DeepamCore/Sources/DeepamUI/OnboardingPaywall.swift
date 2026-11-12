@@ -60,8 +60,8 @@ struct PaywallScreen: View {
     var body: some View {
         ZStack {
             OBBackground(stops: [
-                .init(color: Color(hex: 0x3E2E49), location: 0),
-                .init(color: Color(hex: 0x261C2D), location: 0.5),
+                .init(color: Color(hex: 0x4A1A24), location: 0),
+                .init(color: Color(hex: 0x28101A), location: 0.5),
                 .init(color: OB.ink, location: 1),
             ], glow: .init(color: OB.violet.opacity(0.29), size: 440, x: 40, y: -180))
 
