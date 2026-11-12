@@ -1,20 +1,10 @@
 == app: ошибки и итог ==
 8:Resolve Package Graph
-22627:** BUILD SUCCEEDED **
+22626:** BUILD SUCCEEDED **
 
 == app: хвост ==
     
     /Applications/Xcode_26.6.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c -ivfsstatcache /Users/runner/Library/Developer/Xcode/DerivedData/SDKStatCaches.noindex/iphonesimulator26.5-23F81a-688ef53f1462e2c8f657fdc38a81448ff45c64a1807a658693f2a61704f17a36.sdkstatcache -target arm64-apple-ios17.0-simulator -fmessage-length\=0 -fdiagnostics-show-note-include-stack -fmac
-
-SwiftDriverJobDiscovery normal arm64 Compiling AmplitudeEvents.swift, DeepamApp.swift (in target 'Deepam' from project 'Deepam')
-
-SwiftDriver\ Compilation Deepam normal arm64 com.apple.xcode.tools.swift.compiler (in target 'Deepam' from project 'Deepam')
-    cd /Users/runner/work/indlampada/indlampada/App
-    builtin-Swift-Compilation -- /Applications/Xcode_26.6.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc -module-name Deepam -Onone @/Users/runner/Library/Developer/Xcode/DerivedData/Deepam-gynzirdvqmgklieftusqyyailewe/Build/Intermediates.noindex/Deepam.build/Debug-iphonesimulator/Deepam.build/Objects-normal/arm64/Deepam.SwiftFileList -DDEBUG -Xcc -fmodule-map-file\=/Use
-
-Ld /Users/runner/Library/Developer/Xcode/DerivedData/Deepam-gynzirdvqmgklieftusqyyailewe/Build/Intermediates.noindex/Deepam.build/Debug-iphonesimulator/Deepam.build/Objects-normal/arm64/Binary/Deepam normal arm64 (in target 'Deepam' from project 'Deepam')
-    cd /Users/runner/work/indlampada/indlampada/App
-    /Applications/Xcode_26.6.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -Xlinker -reproducible -target arm64-apple-ios17.0-simulator -isysroot /Applications/Xcode_26.6.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator26.5.sdk -O0 -L/Users/runner/Library/Developer/Xcode/DerivedData/Deepam-gynzirdvqmgklieftusqyyailewe/Build/Interme
 
 SwiftDriverJobDiscovery normal x86_64 Compiling FirebaseEvents.swift, MetaAds.swift (in target 'Deepam' from project 'Deepam')
 
@@ -25,6 +15,16 @@ SwiftDriver\ Compilation Deepam normal x86_64 com.apple.xcode.tools.swift.compil
 Ld /Users/runner/Library/Developer/Xcode/DerivedData/Deepam-gynzirdvqmgklieftusqyyailewe/Build/Intermediates.noindex/Deepam.build/Debug-iphonesimulator/Deepam.build/Objects-normal/x86_64/Binary/Deepam normal x86_64 (in target 'Deepam' from project 'Deepam')
     cd /Users/runner/work/indlampada/indlampada/App
     /Applications/Xcode_26.6.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -Xlinker -reproducible -target x86_64-apple-ios17.0-simulator -isysroot /Applications/Xcode_26.6.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator26.5.sdk -O0 -L/Users/runner/Library/Developer/Xcode/DerivedData/Deepam-gynzirdvqmgklieftusqyyailewe/Build/Interm
+
+SwiftDriverJobDiscovery normal arm64 Compiling PauseIntent.swift, GeneratedAssetSymbols.swift (in target 'Deepam' from project 'Deepam')
+
+SwiftDriver\ Compilation Deepam normal arm64 com.apple.xcode.tools.swift.compiler (in target 'Deepam' from project 'Deepam')
+    cd /Users/runner/work/indlampada/indlampada/App
+    builtin-Swift-Compilation -- /Applications/Xcode_26.6.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc -module-name Deepam -Onone @/Users/runner/Library/Developer/Xcode/DerivedData/Deepam-gynzirdvqmgklieftusqyyailewe/Build/Intermediates.noindex/Deepam.build/Debug-iphonesimulator/Deepam.build/Objects-normal/arm64/Deepam.SwiftFileList -DDEBUG -Xcc -fmodule-map-file\=/Use
+
+Ld /Users/runner/Library/Developer/Xcode/DerivedData/Deepam-gynzirdvqmgklieftusqyyailewe/Build/Intermediates.noindex/Deepam.build/Debug-iphonesimulator/Deepam.build/Objects-normal/arm64/Binary/Deepam normal arm64 (in target 'Deepam' from project 'Deepam')
+    cd /Users/runner/work/indlampada/indlampada/App
+    /Applications/Xcode_26.6.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -Xlinker -reproducible -target arm64-apple-ios17.0-simulator -isysroot /Applications/Xcode_26.6.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator26.5.sdk -O0 -L/Users/runner/Library/Developer/Xcode/DerivedData/Deepam-gynzirdvqmgklieftusqyyailewe/Build/Interme
 
 CreateUniversalBinary /Users/runner/Library/Developer/Xcode/DerivedData/Deepam-gynzirdvqmgklieftusqyyailewe/Build/Products/Debug-iphonesimulator/Deepam.app/Deepam normal arm64\ x86_64 (in target 'Deepam' from project 'Deepam')
     cd /Users/runner/work/indlampada/indlampada/App
@@ -38,17 +38,17 @@ ProcessInfoPlistFile /Users/runner/Library/Developer/Xcode/DerivedData/Deepam-gy
     cd /Users/runner/work/indlampada/indlampada/App
     builtin-infoPlistUtility /Users/runner/work/indlampada/indlampada/App/DeepamInfo.plist -producttype com.apple.product-type.application -genpkginfo /Users/runner/Library/Developer/Xcode/DerivedData/Deepam-gynzirdvqmgklieftusqyyailewe/Build/Products/Debug-iphonesimulator/Deepam.app/PkgInfo -expandbuildsettings -format binary -platform iphonesimulator -additionalcontentfile /Users/runner/Library/
 
+ExtractAppIntentsMetadata (in target 'Deepam' from project 'Deepam')
+    cd /Users/runner/work/indlampada/indlampada/App
+    /Applications/Xcode_26.6.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/appintentsmetadataprocessor --toolchain-dir /var/run/com.apple.security.cryptexd/mnt/com.apple.MobileAsset.MetalToolchain-v17.6.109.0.aYGuUQ/Metal.xctoolchain --module-name Deepam --sdk-root /Applications/Xcode_26.6.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator
+2026-11-12 18:10:22.198 appintentsmetadataprocessor[8341:29606] Starting appintentsmetadataprocessor export
+2026-11-12 18:10:22.268 appintentsmetadataprocessor[8341:29606] Writing Metadata.appintents
+2026-11-12 18:10:22.268 appintentsmetadataprocessor[8341:29606] Metadata root: /Users/runner/Library/Developer/Xcode/DerivedData/Deepam-gynzirdvqmgklieftusqyyailewe/Build/Products/Debug-iphonesimulator/Deepam.app/Metadata.appintents
+
 CopySwiftLibs /Users/runner/Library/Developer/Xcode/DerivedData/Deepam-gynzirdvqmgklieftusqyyailewe/Build/Products/Debug-iphonesimulator/Deepam.app (in target 'Deepam' from project 'Deepam')
     cd /Users/runner/work/indlampada/indlampada/App
     builtin-swiftStdLibTool --copy --verbose --scan-executable /Users/runner/Library/Developer/Xcode/DerivedData/Deepam-gynzirdvqmgklieftusqyyailewe/Build/Products/Debug-iphonesimulator/Deepam.app/Deepam --scan-folder /Users/runner/Library/Developer/Xcode/DerivedData/Deepam-gynzirdvqmgklieftusqyyailewe/Build/Products/Debug-iphonesimulator/Deepam.app/Frameworks --scan-folder /Users/runner/Library/D
 Ignoring --strip-bitcode because --sign was not passed
-
-ExtractAppIntentsMetadata (in target 'Deepam' from project 'Deepam')
-    cd /Users/runner/work/indlampada/indlampada/App
-    /Applications/Xcode_26.6.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/appintentsmetadataprocessor --toolchain-dir /var/run/com.apple.security.cryptexd/mnt/com.apple.MobileAsset.MetalToolchain-v17.6.109.0.lFavLT/Metal.xctoolchain --module-name Deepam --sdk-root /Applications/Xcode_26.6.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator
-2026-11-11 20:14:21.929 appintentsmetadataprocessor[15636:48036] Starting appintentsmetadataprocessor export
-2026-11-11 20:14:22.173 appintentsmetadataprocessor[15636:48036] Writing Metadata.appintents
-2026-11-11 20:14:22.173 appintentsmetadataprocessor[15636:48036] Metadata root: /Users/runner/Library/Developer/Xcode/DerivedData/Deepam-gynzirdvqmgklieftusqyyailewe/Build/Products/Debug-iphonesimulator/Deepam.app/Metadata.appintents
 
 ValidateEmbeddedBinary /Users/runner/Library/Developer/Xcode/DerivedData/Deepam-gynzirdvqmgklieftusqyyailewe/Build/Products/Debug-iphonesimulator/Deepam.app/PlugIns/DeepamWidgetExtension.appex (in target 'Deepam' from project 'Deepam')
     cd /Users/runner/work/indlampada/indlampada/App
@@ -57,13 +57,13 @@ ValidateEmbeddedBinary /Users/runner/Library/Developer/Xcode/DerivedData/Deepam-
 AppIntentsSSUTraining (in target 'Deepam' from project 'Deepam')
     cd /Users/runner/work/indlampada/indlampada/App
     /Applications/Xcode_26.6.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/appintentsnltrainingprocessor --infoplist-path /Users/runner/Library/Developer/Xcode/DerivedData/Deepam-gynzirdvqmgklieftusqyyailewe/Build/Products/Debug-iphonesimulator/Deepam.app/Info.plist --temp-dir-path /Users/runner/Library/Developer/Xcode/DerivedData/Deepam-gynzirdvqmgklieftusqyyailewe/Build/Inte
-2026-11-11 20:14:22.290 appintentsnltrainingprocessor[15648:48079] Parsing options for appintentsnltrainingprocessor
-2026-11-11 20:14:22.293 appintentsnltrainingprocessor[15648:48079] Starting AppIntents SSU YAML Generation
-2026-11-11 20:14:22.382 appintentsnltrainingprocessor[15648:48079] Training 'Verse pause in ${+applicationName}|${+applicationName} pause' for en
-2026-11-11 20:14:22.383 appintentsnltrainingprocessor[15648:48079] Training Negative Phrases '' for en
-2026-11-11 20:14:22.383 appintentsnltrainingprocessor[15648:48079] Application name 'Deepam' for en
-2026-11-11 20:14:22.417 appintentsnltrainingprocessor[15648:48079] Generated AppIntents SSU YAML files in file:///Users/runner/Library/Developer/Xcode/DerivedData/Deepam-gynzirdvqmgklieftusqyyailewe/Build/Intermediates.noindex/Deepam.build/Debug-iphonesimulator/Deepam.build/ssu/
-2026-11-11 20:14:22.417 appintentsnltrainingprocessor[15648:48079] Copied AppIntents SSU YAML files to file:///Users/runner/Library/Developer/Xcode/DerivedData/Deepam-gynzirdvqmgklieftusqyyailewe/Build/Products/Debug-iphonesimulator/Deepam.app/Metadata.appintents/
+2026-11-12 18:10:22.319 appintentsnltrainingprocessor[8343:29613] Parsing options for appintentsnltrainingprocessor
+2026-11-12 18:10:22.320 appintentsnltrainingprocessor[8343:29613] Starting AppIntents SSU YAML Generation
+2026-11-12 18:10:22.333 appintentsnltrainingprocessor[8343:29613] Training 'Verse pause in ${+applicationName}|${+applicationName} pause' for en
+2026-11-12 18:10:22.333 appintentsnltrainingprocessor[8343:29613] Training Negative Phrases '' for en
+2026-11-12 18:10:22.333 appintentsnltrainingprocessor[8343:29613] Application name 'Deepam' for en
+2026-11-12 18:10:22.346 appintentsnltrainingprocessor[8343:29613] Generated AppIntents SSU YAML files in file:///Users/runner/Library/Developer/Xcode/DerivedData/Deepam-gynzirdvqmgklieftusqyyailewe/Build/Intermediates.noindex/Deepam.build/Debug-iphonesimulator/Deepam.build/ssu/
+2026-11-12 18:10:22.346 appintentsnltrainingprocessor[8343:29613] Copied AppIntents SSU YAML files to file:///Users/runner/Library/Developer/Xcode/DerivedData/Deepam-gynzirdvqmgklieftusqyyailewe/Build/Products/Debug-iphonesimulator/Deepam.app/Metadata.appintents/
 Archiving all locales.
 [------------------------------------------------------------] 0% archiving en[🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢] 100% archived en[🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢] 100% archived 1 locales/Users/runner/Library/Developer/Xcode/DerivedData/Deepam-gynzirdvqmgklieftusqyyailewe/Build/Products/Debug-iphonesimulator/Deepam.app/en.lproj/nlu.appinte
 /Users/runner/Library/Developer/Xcode/DerivedData/Deepam-gynzirdvqmgklieftusqyyailewe/Build/Products/Debug-iphonesimulator/Deepam.app/en.lproj/nlu.appintents/89d0c0fe382ac1eb3ace0b9739ec445b.version
